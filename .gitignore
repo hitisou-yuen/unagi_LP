@@ -1,0 +1,4 @@
+config.php
+orders/
+.DS_Store
+*.log
