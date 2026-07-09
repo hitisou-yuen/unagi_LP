@@ -1,0 +1,2173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>夜専用うなぎ弁当の宅配｜七宗遊園</title>
+  <meta name="description" content="七宗町内配達無料。三河産うなぎを使った夜専用弁当を金曜・土曜・日曜にお届けします。お届け週の木曜17:00までの完全予約制です。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbf3e4;
+      --bg-soft: #fffaf0;
+      --paper: #fff7e8;
+      --brown: #4a2f1b;
+      --brown-2: #6b4423;
+      --brown-3: #8a3b24;
+      --ink: #24170f;
+      --muted: #6f5a46;
+      --line: #06c755;
+      --line-dark: #04a845;
+      --tel: #315832;
+      --gold: #c49a45;
+      --cream: #f8ead0;
+      --white: #ffffff;
+      --danger: #b91c1c;
+      --shadow: 0 14px 36px rgba(59, 37, 21, .16);
+      --radius: 22px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(196,154,69,.16), transparent 32rem),
+        linear-gradient(180deg, #fff8eb 0%, var(--bg) 38%, #f7e8d0 100%);
+      font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      line-height: 1.75;
+      letter-spacing: .02em;
+      padding-bottom: calc(96px + var(--safe-bottom));
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .page {
+      width: min(100%, 480px);
+      margin: 0 auto;
+      background: rgba(255, 250, 240, .64);
+      box-shadow: 0 0 0 1px rgba(74, 47, 27, .04);
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(100% - 32px, 440px);
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 248, 235, .92);
+      border-bottom: 1px solid rgba(107, 68, 35, .12);
+    }
+
+    .header-inner {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-main {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 900;
+      font-size: 20px;
+      color: var(--brown);
+      letter-spacing: .08em;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .header-cta {
+      background: var(--line);
+      color: white;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 8px 20px rgba(6, 199, 85, .25);
+      white-space: nowrap;
+    }
+
+    .hero {
+      position: relative;
+      padding: 22px 0 34px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 0 34px 34px;
+      background:
+        linear-gradient(180deg, rgba(37, 23, 12, .55), rgba(37, 23, 12, .72)),
+        url("lunchbox_images/unagi2.png");
+      background-size: cover;
+      background-position: center;
+      min-height: 610px;
+      display: flex;
+      align-items: flex-end;
+      margin-top: -1px;
+    }
+
+    /* 画像未設定時の仮背景 */
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 68% 32%, rgba(224, 176, 82, .34), transparent 18rem),
+        linear-gradient(145deg, #2f1f14, #7a3b21 45%, #1f160f);
+      z-index: -1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 30px 16px 24px;
+      color: white;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 248, 235, .94);
+      color: var(--brown);
+      border: 1px solid rgba(255,255,255,.5);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .hero-title {
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(42px, 13vw, 45px);
+      line-height: 1.14;
+      letter-spacing: .04em;
+      margin: 18px 0 18px;
+      text-shadow: 0 6px 26px rgba(0,0,0,.38);
+    }
+
+    .hero-lead {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.9;
+      margin: 0 0 20px;
+      text-shadow: 0 4px 18px rgba(0,0,0,.4);
+    }
+
+    .hero-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      width: 100%;
+      min-height: 60px;
+      border: 0;
+      border-radius: 16px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      font-weight: 900;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+      letter-spacing: .03em;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+      filter: brightness(.96);
+    }
+
+    .btn-line {
+      background: rgba(6, 199, 85, 0.75);
+      color: white;
+      box-shadow: 0 10px 26px rgba(6, 199, 85, .32);
+    }
+
+    .btn-tel {
+      background: rgba(247, 232, 208, 0.55);
+      box-shadow: 0 8px 20px rgba(0,0,0,.14);
+    }
+
+    .conditions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .condition {
+      background: rgba(0, 0, 0, .26);
+      color: #ffffff;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(6px);
+      text-shadow: 0 2px 5px rgba(0,0,0,.72);
+      border: 1px solid rgba(255,255,255,.58);
+      border-radius: 15px;
+      padding: 11px 9px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.45;
+      box-shadow: 0 8px 24px rgba(0,0,0,.1);
+    }
+
+    section {
+      padding: 52px 0;
+    }
+
+    .section-tight {
+      padding: 34px 0;
+    }
+
+    .eyebrow {
+      color: var(--brown-3);
+      font-size: 12px;
+      letter-spacing: .16em;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: "Noto Serif JP", serif;
+      color: var(--brown);
+      font-size: 30px;
+      line-height: 1.45;
+      margin: 0 0 18px;
+      letter-spacing: .04em;
+    }
+
+    .lead {
+      font-size: 17px;
+      font-weight: 500;
+      color: #342316;
+      margin: 0;
+    }
+
+    .card {
+      background: rgba(255, 250, 240, .9);
+      border: 1px solid rgba(107, 68, 35, .12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .story-card {
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(255,250,240,.93), rgba(255,247,232,.96));
+    }
+
+    .story-card::after {
+      content: "";
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 1px solid rgba(196,154,69,.28);
+      opacity: .6;
+      pointer-events: none;
+    }
+
+    .product {
+      padding-top: 0;
+    }
+
+    .product-photo {
+      margin: 0 0 18px;
+      border-radius: 26px;
+      overflow: hidden;
+      min-height: 260px;
+      background:
+      url("lunchbox_images/hitumabusi.jpg");
+      background-size: cover;
+      background-position:10% center;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .product-photo::before {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: rgba(255,255,255,.92);
+      background:
+        radial-gradient(circle at 55% 35%, rgba(201,120,45,.36), transparent 10rem),
+        linear-gradient(135deg, #4a2f1b, #9a4a25);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: .03em;
+      z-index: -1;
+    }
+
+    .product-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+    .price-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      border-top: 1px solid rgba(107, 68, 35, .14);
+      margin-top: 18px;
+      padding-top: 16px;
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 900;
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--brown-3);
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .price small {
+      font-size: 15px;
+      margin-right: 4px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #efe1c3;
+      color: var(--brown);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+
+    .price-offer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+
+    .regular-price {
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .regular-price s {
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--brown-3);
+    }
+
+    .special-label {
+      display: inline-block;
+      color: var(--brown-3);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .05em;
+    }
+
+    .menu-price-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 6px 10px;
+      margin-top: 5px;
+    }
+
+    .menu-old-price {
+      color: var(--muted);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .menu-old-price s {
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--brown-3);
+    }
+
+    .menu-sale-price {
+      color: var(--brown-3);
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .footer {
+      position: relative;
+      padding: 44px 0 36px;
+      background:
+        radial-gradient(circle at top center, rgba(196,154,69,.18), transparent 18rem),
+        linear-gradient(180deg, #4a2f1b 0%, #2f1d12 100%);
+      color: #fff7e8;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .footer::before {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 22px;
+    }
+
+    .footer-copy {
+      margin-top: 8px;
+      color: #ead9bf;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .footer-contact {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      font-size: 13px;
+      color: #f3e5cf;
+      line-height: 1.9;
+    }
+
+    .footer-contact a {
+      color: #ffffff;
+      font-weight: 900;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      font-size: 11px;
+      color: rgba(255,247,232,.62);
+      letter-spacing: .04em;
+    }
+
+
+    .commitment-section {
+      background:
+        linear-gradient(180deg, rgba(255,250,240,.96), rgba(248,234,208,.92));
+    }
+
+    .commitment-intro {
+      margin-bottom: 22px;
+    }
+
+    .commitment-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .commitment-item {
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(107, 68, 35, .13);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 28px rgba(59, 37, 21, .08);
+    }
+
+    .commitment-number {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--brown);
+      color: #fff7e8;
+      font-family: "Noto Serif JP", serif;
+      font-size: 15px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .commitment-title {
+      font-family: "Noto Serif JP", serif;
+      color: var(--brown);
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .commitment-text {
+      margin: 0;
+      color: #342316;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.85;
+    }
+
+    .commitment-note {
+      margin-top: 18px;
+      background: var(--brown);
+      color: #fff7e8;
+      border-radius: 16px;
+      padding: 15px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .scene-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .scene-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: rgba(255, 250, 240, .9);
+      border: 1px solid rgba(107, 68, 35, .12);
+      border-radius: 17px;
+      padding: 14px 15px;
+      font-weight: 900;
+      color: var(--brown);
+    }
+
+    .scene-num {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--brown);
+      color: white;
+      font-family: "Noto Serif JP", serif;
+    }
+
+    .quote-section {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.50), rgba(0,0,0,.50)),
+        url("lunchbox_images/unagi3.png");
+      background-size: cover;
+      background-position: center;
+      color: #fff7e8;
+    }
+
+    .quote-section h2 {
+      color: #fff7e8;
+      font-size: 26px;
+    }
+
+    .quote-section .lead {
+      color: #fff0d5;
+    }
+
+    .menu-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .menu-item {
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 13px;
+      align-items: center;
+      background: #fffaf0;
+      border: 1px solid rgba(107, 68, 35, .12);
+      border-radius: 18px;
+      padding: 10px;
+    }
+
+    .menu-thumb {
+      width: 74px;
+      height: 74px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #78401f, #e3b66c);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 11px;
+      font-weight: 900;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .menu-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .menu-name {
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1.35;
+    }
+
+    .menu-desc {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .rules {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .rule {
+      background: #fffaf0;
+      border: 1px solid rgba(107, 68, 35, .13);
+      border-radius: 16px;
+      padding: 15px 15px;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .rule-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #efe1c3;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: var(--brown);
+    }
+
+    .rule-title {
+      font-weight: 900;
+      color: var(--brown);
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .rule-sub {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .final-cta {
+      background: linear-gradient(180deg, #fff7e8, #f0dcc0);
+      padding-bottom: 64px;
+    }
+
+    .notice {
+      background: #fffaf0;
+      border: 2px solid rgba(196,154,69,.34);
+      border-radius: 18px;
+      padding: 16px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--brown);
+      margin: 20px 0;
+    }
+
+    .tel-info {
+      font-size: 15px;
+      color: var(--muted);
+      margin-top: 16px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+
+    .floating-cta {
+      position: fixed;
+      right: 14px;
+      bottom: calc(18px + var(--safe-bottom));
+      z-index: 100;
+      width: 132px;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      border-radius: 999px;
+      padding: 0;
+      transition: opacity .22s ease, transform .22s ease;
+    }
+
+    .floating-cta.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(14px);
+    }
+
+    .floating-main {
+      width: 132px;
+      min-height: 58px;
+      border-radius: 999px;
+      font-size: 15px;
+      line-height: 1.15;
+      flex-direction: column;
+      gap: 2px;
+      box-shadow: 0 10px 26px rgba(6, 199, 85, .34);
+      border: 1px solid rgba(255,255,255,.45);
+    }
+
+    .floating-small {
+      display: block;
+      font-size: 11px;
+      font-weight: 900;
+      line-height: 1;
+      opacity: .95;
+    }
+
+    .floating-main-text {
+      display: block;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .floating-sub {
+      display: none;
+    }
+
+    .floating-sub a {
+      color: var(--brown-3);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      background: rgba(23, 16, 11, .58);
+      padding-top: max(56px, env(safe-area-inset-top, 0px));
+    }
+
+    .modal.is-open {
+      display: flex;
+    }
+
+    .modal-panel {
+      width: min(calc(100% - 20px), 480px);
+      max-height: calc(100vh - max(72px, env(safe-area-inset-top, 0px)));
+      margin: 0 auto 10px;
+      overflow: auto;
+      overscroll-behavior: contain;
+      background: var(--bg-soft);
+      border-radius: 28px;
+      box-shadow: 0 -20px 60px rgba(0,0,0,.25);
+      padding-bottom: calc(22px + var(--safe-bottom));
+    }
+
+    .modal-header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: rgba(255, 250, 240, .98);
+      border-bottom: 1px solid rgba(107, 68, 35, .12);
+      padding: 18px 16px;
+      backdrop-filter: blur(14px);
+      border-radius: 28px 28px 0 0;
+    }
+
+    .modal-headline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .modal-title {
+      font-family: "Noto Serif JP", serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1.2;
+    }
+
+    .close-btn {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 52px;
+      border: 2px solid rgba(107, 68, 35, .14);
+      border-radius: 50%;
+      background: #efe1c3;
+      color: var(--brown);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 6px 16px rgba(59, 37, 21, .14);
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    .close-btn:active {
+      transform: scale(.96);
+    }
+
+    .modal-body {
+      padding: 18px 16px 0;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 8px;
+      margin: 14px 0 22px;
+    }
+
+    .check-item {
+      background: white;
+      border-radius: 14px;
+      padding: 11px 13px;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--brown);
+      border: 1px solid rgba(107, 68, 35, .1);
+    }
+
+    .form-block {
+      background: white;
+      border: 1px solid rgba(107, 68, 35, .12);
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .form-title {
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+
+    .field {
+      margin-bottom: 14px;
+    }
+
+    .field:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: block;
+      font-weight: 900;
+      color: var(--brown);
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+
+    .required {
+      display: inline-block;
+      margin-left: 6px;
+      background: var(--brown-3);
+      color: white;
+      border-radius: 999px;
+      padding: 2px 7px;
+      font-size: 11px;
+      vertical-align: middle;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      min-height: 54px;
+      border: 2px solid rgba(107, 68, 35, .18);
+      border-radius: 13px;
+      background: #fffdf8;
+      padding: 12px 13px;
+      color: var(--ink);
+      font-size: 17px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 96px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(196,154,69,.16);
+    }
+
+    .help {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    .zip-row {
+      display: grid;
+      grid-template-columns: 1fr 104px;
+      gap: 8px;
+    }
+
+    .small-btn {
+      border: 0;
+      border-radius: 12px;
+      background: var(--brown);
+      color: white;
+      font-weight: 900;
+      cursor: pointer;
+      min-height: 54px;
+    }
+
+    .qty-row {
+      display: grid;
+      grid-template-columns: 1fr 142px;
+      gap: 10px;
+      align-items: center;
+      border-top: 1px solid rgba(107, 68, 35, .1);
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+
+    .qty-row:first-child {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .qty-name {
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1.35;
+      font-size: 15px;
+    }
+
+    .qty-price {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .qty-control {
+      display: grid;
+      grid-template-columns: 42px 1fr 42px;
+      border: 2px solid rgba(107, 68, 35, .16);
+      border-radius: 13px;
+      overflow: hidden;
+      min-height: 46px;
+      background: #fffdf8;
+    }
+
+    .qty-btn {
+      border: 0;
+      background: #efe1c3;
+      color: var(--brown);
+      font-size: 24px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .qty-num {
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--ink);
+      background: white;
+    }
+
+    .error {
+      display: none;
+      color: var(--danger);
+      background: #fff1f1;
+      border: 1px solid rgba(185, 28, 28, .22);
+      border-radius: 13px;
+      padding: 10px 12px;
+      font-weight: 900;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+    .error.is-show {
+      display: block;
+    }
+
+    .confirm-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-weight: 900;
+      color: var(--brown);
+      margin: 16px 0;
+    }
+
+    .confirm-row input {
+      width: 24px;
+      height: 24px;
+      min-height: auto;
+      margin-top: 4px;
+      accent-color: var(--line);
+    }
+
+    .summary-box {
+      background: #fff7e8;
+      border: 1px dashed rgba(107, 68, 35, .35);
+      border-radius: 15px;
+      padding: 13px;
+      color: var(--brown);
+      font-size: 14px;
+      font-weight: 700;
+      white-space: pre-line;
+      margin-bottom: 14px;
+    }
+
+
+    .payment-choice {
+      display: none;
+      background: #fffaf0;
+      border: 2px solid rgba(196,154,69,.34);
+      border-radius: 18px;
+      padding: 15px;
+      margin: 16px 0 14px;
+    }
+
+    .payment-choice.is-show {
+      display: block;
+    }
+
+    .payment-title {
+      font-weight: 900;
+      color: var(--brown);
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .payment-actions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .btn-card {
+      background: var(--brown);
+      color: #fff7e8;
+      box-shadow: 0 10px 26px rgba(74, 47, 27, .22);
+    }
+
+    .btn-cash {
+      background: var(--line);
+      color: white;
+      box-shadow: 0 10px 26px rgba(6, 199, 85, .28);
+    }
+
+    .payment-note {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.65;
+      margin-top: 10px;
+    }
+
+    .loading-text {
+      display: none;
+      color: var(--brown);
+      font-size: 13px;
+      font-weight: 900;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .loading-text.is-show {
+      display: block;
+    }
+
+    .submit-help {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .faq-section {
+      background: #fffaf0;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .faq-item {
+      background: rgba(255, 250, 240, .96);
+      border: 1px solid rgba(107, 68, 35, .14);
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(59, 37, 21, .08);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 17px 46px 17px 16px;
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1.55;
+      position: relative;
+      font-size: 16px;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "＋";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #efe1c3;
+      color: var(--brown);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 16px 17px;
+      color: #342316;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.8;
+      border-top: 1px solid rgba(107, 68, 35, .10);
+      margin-top: -1px;
+    }
+
+    .faq-answer p {
+      margin: 14px 0 0;
+    }
+
+    @media (min-width: 520px) {
+      body {
+        background-color: #ead7bd;
+      }
+
+      .page {
+        min-height: 100vh;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .container {
+        width: min(100% - 24px, 440px);
+      }
+
+      .hero-title {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .conditions {
+        grid-template-columns: 1fr;
+      }
+
+      .qty-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#" class="brand" aria-label="七宗遊園 トップへ">
+          <span class="brand-main">七宗遊園</span>
+          <span class="brand-sub">夜専用弁当の宅配</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!--セクション１-->
+      <section class="hero-card" aria-label="ファーストビュー">
+        <div class="hero-content">
+          <span class="label">七宗町内 配達無料</span>
+          <h1 class="hero-title">たまには、<br>うなぎを<br>食べたい夜<br>もある。</h1>
+          <p class="hero-lead">
+            そんな夜に<br>
+            七宗遊園がご自宅まで<br>
+            夜専用うなぎ弁当をお届けします。
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-line js-open-modal page-cta" type="button">LINEで予約する</button>
+            <a class="btn btn-tel page-cta" href="tel:0574461128">電話で予約する</a>
+          </div>
+
+          <div class="conditions" aria-label="注文条件">
+            <div class="condition">七宗町内<br>配達無料</div>
+            <div class="condition">木曜17:00<br>締切</div>
+            <div class="condition">金・土・日<br>限定</div>
+            <div class="condition">お弁当<br>2個から</div>
+          </div>
+        </div>
+      </section>
+
+      <!--セクション２-->
+      <section class="section-tight">
+        <div class="container">
+          <div class="card story-card">
+            <h2>最後に、<br>うなぎを食べたのは。</h2>
+            <p class="lead">
+              食べたいと思っても、<br>わざわざ出かけるほどではない。<br>
+              でも、家に届くなら話は別です。<br><br>
+              いつもの食卓に、少し楽しみな夜を。<br>七宗遊園が、ご自宅までお届けします。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--セクション３-->
+      <section class="product">
+        <div class="container">
+          <div class="product-photo" role="img" aria-label="三河産 うなぎ弁当の写真"></div>
+
+          <div class="card">
+            <span class="badge">三河産うなぎ使用</span>
+            <h2>ふっくら香ばしい、<br>夜のうなぎ弁当。</h2>
+            <p class="lead">
+              ふっくら香ばしいうなぎを、お弁当に。<br>ご家族でゆっくり楽しむ夜にどうぞ。
+            </p>
+
+            <div class="price-row">
+              <div>
+                <div class="price-label">三河産 うな重弁当</div>
+                <div class="price-label">七宗町内 配達無料</div>
+              </div>
+              <div class="price-offer">
+                <div class="regular-price">通常 <s>3300円</s></div>
+                <span class="special-label">期間限定価格</span>
+                <div class="price"><small>税込</small>2700円〜</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!--こだわりセクション-->
+      <section class="commitment-section">
+        <div class="container">
+          <div class="eyebrow">OUR COMMITMENT</div>
+
+          <div class="commitment-intro">
+            <h2>70年、魚に<br>向き合ってきた<br>私たちだから。</h2>
+            <p class="lead">
+              素材の良さだけでなく、<br>
+              魚を扱ってきた経験と<br>
+              地元の水や食材を生かして、<br>
+              一つずつ丁寧に仕上げます。
+            </p>
+          </div>
+
+          <div class="commitment-list">
+            <div class="commitment-item">
+              <span class="commitment-number">1</span>
+              <div class="commitment-title">神渕(かぶち)の源流で泥抜き</div>
+              <p class="commitment-text">
+                三河産うなぎを、<br>
+                神渕(かぶち)の清らかな水で<br>
+                丁寧に泥抜きします。<br>
+                臭みを抑え、<br>
+                香ばしく焼き上げます。
+              </p>
+            </div>
+
+            <div class="commitment-item">
+              <span class="commitment-number">2</span>
+              <div class="commitment-title">注文日に捌く</div>
+              <p class="commitment-text">
+                作り置きではなく、<br>
+                ご注文日に<br>
+                店内でうなぎを捌きます。<br>
+                鮮度を大切にした<br>
+                夜専用のお弁当です。
+              </p>
+            </div>
+
+            <div class="commitment-item">
+              <span class="commitment-number">3</span>
+              <div class="commitment-title">地元の味で仕上げる</div>
+              <p class="commitment-text">
+                神渕産のお米と、<br>
+                白扇酒造の本みりん・料理酒。<br>
+                それらを使った<br>
+                自家製タレで<br>
+                ふっくら香ばしく仕上げます。
+              </p>
+            </div>
+          </div>
+
+          <div class="commitment-note">
+            三河産うなぎを使用し、<br>
+            七宗遊園ならではの<br>
+            地元の味に仕上げています。
+          </div>
+        </div>
+      </section>
+
+      <!--セクション4-->
+      <section>
+        <div class="container">
+          <h2>月一回<br>うなぎの日を。</h2>
+          <p class="lead">
+            毎日のごはんを大切にしながら、<br>たまには少し気分を変えて。<br>毎週金・土・日の夜に<br>うなぎを囲む時間をお届けします。
+          </p>
+
+          <div class="scene-item">
+            <span class="scene-num">
+              <img src="lunchbox_images/dinner.png" alt="家族の夕食">
+            </span>
+            <span>ご家族との夕食に</span>
+          </div>
+
+          <div class="scene-item">
+            <span class="scene-num">
+              <img src="lunchbox_images/friday.png" alt="月に一度の楽しみ">
+            </span>
+            <span>金曜の楽しみに</span>
+          </div>
+
+          <div class="scene-item">
+            <span class="scene-num">
+              <img src="lunchbox_images/gift.png" alt="差し入れ">
+            </span>
+            <span>ご実家への差し入れに</span>
+          </div>
+
+          <div class="scene-item">
+            <span class="scene-num">
+              <img src="lunchbox_images/family.png" alt="家族が集まる日">
+            </span>
+            <span>家族が集まる日に</span>
+          </div>
+        </div>
+      </section>
+
+      <!--セクション5-->
+      <section class="quote-section">
+        <div class="container">
+          <h2>今日はうなぎが届く日だね。</h2><br><br>
+          <p class="lead">
+            そんな一言があるだけで、<br>いつもの夕飯が少し楽しみになります。<br><br>
+            いつもの食卓に少しだけの特別感を。<br>
+          </p>
+        </div>
+      </section>
+
+      <!--セクション6-->
+      <section>
+        <div class="container">
+          <h2>お品書き</h2>
+          <p class="lead">
+            三河産うなぎを使った<br>三つのお弁当をご用意しています。
+          </p>
+
+          <div class="menu-list">
+            <div class="menu-item">
+              <div class="menu-thumb">
+                <img src="lunchbox_images/unagibento.jpg" alt="三河産うなぎ弁当" onerror="this.remove(); this.parentElement.textContent='うなぎ';">
+              </div>
+              <div>
+                <div class="menu-name">三河産 うな重弁当</div>
+                <div class="menu-price-wrap">
+                  <span class="menu-old-price">通常 <s>3300円</s>　→</span>
+                  <span class="menu-sale-price">税込 2700円</span>
+                </div>
+                <div class="menu-desc">三河産うなぎ使用</div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-thumb">
+                <img src="lunchbox_images/hitumabusi.jpg" alt="三河産ひつまぶし弁当" onerror="this.remove(); this.parentElement.textContent='ひつまぶし';">
+              </div>
+              <div>
+                <div class="menu-name">三河産 ひつまぶし弁当</div>
+                <div class="menu-price-wrap">
+                  <span class="menu-old-price">通常 <s>3500円</s>　→</span>
+                  <span class="menu-sale-price">税込 2900円</span>
+                </div>
+                <div class="menu-desc">薬味とだしで味わう一品</div>
+              </div>
+            </div>
+
+            <div class="menu-item">
+              <div class="menu-thumb">
+                <img src="lunchbox_images/unagyu.png" alt="極み うな牛まぶし弁当" onerror="this.remove(); this.parentElement.textContent='うな牛';">
+              </div>
+              <div>
+                <div class="menu-name">極み うな牛まぶし弁当</div>
+                <div class="menu-price-wrap">
+                  <span class="menu-sale-price">税込 3500円</span>
+                </div>
+                <div class="menu-desc">うなぎと飛騨牛のごちそう弁当</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--セクション7-->
+      <section class="section-tight">
+        <div class="container">
+          <div class="eyebrow">ORDER RULE</div>
+          <h2>配達・ご注文ルール</h2>
+
+          <div class="rule">
+              <div class="rule-icon">
+                <img src="lunchbox_images/calendar.png" alt="完全予約制">
+              </div>
+              <div>
+                <div class="rule-title">予約制</div>
+                <div class="rule-sub">お届けの週の木曜17:00締切</div>
+              </div>
+          </div>
+
+          <div class="rule">
+              <div class="rule-icon">
+                <img src="lunchbox_images/two.png" alt="2個から">
+              </div>
+              <div>
+                <div class="rule-title">お弁当2個から</div>
+                <div class="rule-sub">合計2個以上</div>
+              </div>
+          </div>
+
+            <div class="rule">
+              <div class="rule-icon">
+                <img src="lunchbox_images/week.png" alt="金土日のみ">
+              </div>
+              <div>
+                <div class="rule-title">金・土・日限定</div>
+                <div class="rule-sub">限定お届け</div>
+              </div>
+            </div>
+
+            <div class="rule">
+              <div class="rule-icon">
+                <img src="lunchbox_images/time.png" alt="配達時間">
+              </div>
+              <div>
+                <div class="rule-title">15:00〜18:00</div>
+                <div class="rule-sub">配達予定</div>
+              </div>
+            </div>
+
+            <div class="rule">
+              <div class="rule-icon">
+                <img src="lunchbox_images/free.png" alt="七宗町内無料">
+              </div>
+              <div>
+                <div class="rule-title">七宗町内無料</div>
+                <div class="rule-sub">町内配達</div>
+              </div>
+            </div>
+
+            <div class="rule">
+              <div class="rule-icon">
+                <img src="lunchbox_images/cash.png" alt="現金引き換え">
+              </div>
+              <div>
+                <div class="rule-title">現金またはカード決済</div>
+                <div class="rule-sub">受取時の現金払い・事前カード決済に対応</div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <!--FAQ-->
+      <section class="faq-section">
+        <div class="container">
+          <h2>よくあるご質問</h2>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>Q. 当日注文はできないの？</summary>
+              <div class="faq-answer">
+                <p>申し訳ありません。配達時間やご注文内容の間違いを防ぐため、お届け週の木曜17:00までのご予約制とさせていただいております。</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Q. 1個だけ配達できないの？</summary>
+              <div class="faq-answer">
+                <p>配達の都合上、申し訳ありませんが、お弁当は合計2個からお願いしています。</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Q. 何時ごろ届くの？</summary>
+              <div class="faq-answer">
+                <p>15時〜18時の間で順番にお届けします。ご希望時間があれば、できる範囲で調整します。</p>
+              </div>
+            </details>
+
+
+
+            <details class="faq-item">
+              <summary>Q. 配達料はかかるの？</summary>
+              <div class="faq-answer">
+                <p>七宗町内は配達無料です。</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!--CTA-->
+      <section class="final-cta">
+        <div class="container">
+          <h2>今週の<br>うなぎ弁当を<br>予約する。</h2>
+          <p class="lead">
+            必要事項を入力するだけ。<br>金・土・日の15:00〜18:00にお届けします。
+          </p>
+
+          <button class="btn btn-line js-open-modal page-cta" type="button">LINEでかんたん予約</button>
+          <a class="btn btn-tel page-cta" href="tel:0574461128" style="margin-top:10px;">電話で予約したい方はこちら</a>
+
+          <div class="tel-info">
+            電話対応は10:00~17:00<br>
+            電話番号：0574-46-1128<br>
+            定休日：第2・第4火曜
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-name">七宗遊園</div>
+        <div class="footer-copy">夜の食卓に、少し特別なひとときを。</div>
+
+        <div class="footer-contact">
+          <div>夜専用弁当の宅配</div>
+          <div>ご予約・お問い合わせ</div>
+          <a href="tel:0574461128">TEL 0574-46-1128</a><br>
+          <span>受付時間 10:00〜17:00</span><br>
+          <span>定休日 第2・第4火曜日</span>
+        </div>
+
+        <div class="footer-note">
+          © 七宗遊園 All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="floating-cta">
+    <button class="btn btn-line floating-main js-open-modal" type="button">
+      <span class="floating-small">簡単1分</span>
+      <span class="floating-main-text">予約する</span>
+    </button>
+    <div class="floating-sub">
+      <span>木曜17時締切</span>
+      <span>2個から</span>
+      <a href="tel:0574461128">電話注文はこちら</a>
+    </div>
+  </div>
+
+  <div class="modal" id="reservationModal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <div class="modal-headline">
+          <div>
+            <div class="modal-title" id="modalTitle">LINEでかんたん予約</div>
+          </div>
+          <button class="close-btn js-close-modal" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+
+        <form id="reservationForm">
+          <div class="form-block">
+            <div class="form-title">1. 配達日</div>
+            <div class="field">
+              <label for="deliveryDate">配達希望日<span class="required">必須</span></label>
+              <select id="deliveryDate" required>
+                <option value="">配達日を選択してください</option>
+              </select>
+              <div class="help">毎週金・土・日のみ表示されます。</div>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <div class="form-title">2. お客様情報</div>
+            <div class="field">
+              <label for="customerName">お名前<span class="required">必須</span></label>
+              <input id="customerName" type="text" placeholder="例：七宗　太郎" required autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="phone">電話番号<span class="required">必須</span></label>
+              <input id="phone" type="tel" placeholder="例：090-1234-5678" required autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="zip">郵便番号</label>
+              <div class="zip-row">
+                <input id="zip" type="text" inputmode="numeric" placeholder="例：5090401" autocomplete="postal-code" />
+                <button class="small-btn" type="button" id="zipSearch">住所検索</button>
+              </div>
+              <div class="help">郵便番号を入力すると住所を自動入力できます。</div>
+            </div>
+
+            <div class="field">
+              <label for="address">ご住所（番地までご入力ください）<span class="required">必須</span></label>
+              <input id="address" type="text" placeholder="例：岐阜県七宗町神渕4183-4番地" required autocomplete="street-address" />
+            </div>
+          </div>
+
+          <div class="form-block">
+            <div class="form-title">3. お弁当の数</div>
+
+            <div class="qty-row" data-product-id="unaju" data-item="三河産 うなぎ弁当" data-price="2700" data-category="bento">
+              <div>
+                <div class="qty-name">三河産 うなぎ弁当</div>
+                <div class="qty-price">通常3300円 → 税込2700円</div>
+              </div>
+              <div class="qty-control">
+                <button class="qty-btn" type="button" data-action="minus">−</button>
+                <div class="qty-num">0</div>
+                <button class="qty-btn" type="button" data-action="plus">＋</button>
+              </div>
+            </div>
+
+            <div class="qty-row" data-product-id="hitsumabushi" data-item="三河産 ひつまぶし弁当" data-price="2900" data-category="bento">
+              <div>
+                <div class="qty-name">三河産 ひつまぶし弁当</div>
+                <div class="qty-price">通常3500円 → 税込2900円</div>
+              </div>
+              <div class="qty-control">
+                <button class="qty-btn" type="button" data-action="minus">−</button>
+                <div class="qty-num">0</div>
+                <button class="qty-btn" type="button" data-action="plus">＋</button>
+              </div>
+            </div>
+
+            <div class="qty-row" data-product-id="unagyu_mabushi" data-item="極み うな牛まぶし弁当" data-price="3500" data-category="bento">
+              <div>
+                <div class="qty-name">極み うな牛まぶし弁当</div>
+                <div class="qty-price">税込3500円</div>
+              </div>
+              <div class="qty-control">
+                <button class="qty-btn" type="button" data-action="minus">−</button>
+                <div class="qty-num">0</div>
+                <button class="qty-btn" type="button" data-action="plus">＋</button>
+              </div>
+            </div>
+
+            <div class="error" id="bentoError">お弁当の合計が2個以上になるようにしてください。</div>
+          </div>
+
+          <div class="form-block">
+            <div class="form-title">4. 備考</div>
+            <div class="field">
+              <label for="note">備考・ご希望</label>
+              <textarea id="note" placeholder="例：18時前だと助かります"></textarea>
+            </div>
+          </div>
+
+          <div class="summary-box" id="summaryBox">予約内容がここに表示されます。</div>
+
+          <label class="confirm-row">
+            <input id="confirmCheck" type="checkbox" required />
+            <span>内容を確認しました</span>
+          </label>
+
+
+          <div class="payment-choice" id="paymentChoice" aria-live="polite">
+            <div class="payment-title">お支払い方法を選択してください</div>
+            <div class="payment-actions">
+              <button class="btn btn-cash" type="button" id="cashPaymentBtn">受け取り時に現金で支払う</button>
+              <button class="btn btn-card" type="button" id="cardPaymentBtn">カードで事前決済する</button>
+            </div>
+            <div class="payment-note">
+              現金払いはLINEへ注文内容を送信します。<br>
+              カード決済はStripeの安全な決済画面へ移動します。カード情報は七宗遊園では保持しません。
+            </div>
+            <div class="loading-text" id="paymentLoading">決済ページを準備しています...</div>
+          </div>
+
+          <button class="btn btn-line" type="submit">支払い方法を選んで予約する</button>
+          <div class="submit-help">
+            アカウント名：七宗遊園【弁当配達】
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const LINE_ACCOUNT_ID = "@602nbqce";
+    const CHECKOUT_ENDPOINT = "create-checkout-session.php";
+    const modal = document.getElementById("reservationModal");
+    const form = document.getElementById("reservationForm");
+    const deliveryDate = document.getElementById("deliveryDate");
+    const summaryBox = document.getElementById("summaryBox");
+    const bentoError = document.getElementById("bentoError");
+    const paymentChoice = document.getElementById("paymentChoice");
+    const cashPaymentBtn = document.getElementById("cashPaymentBtn");
+    const cardPaymentBtn = document.getElementById("cardPaymentBtn");
+    const paymentLoading = document.getElementById("paymentLoading");
+
+    /*
+      Stripeサンドボックス価格ID対応表
+      unaju            → price_1Tmsd4LgdgJDHL91ixiMjzi5
+      hitsumabushi     → price_1TmsihLgdgJDHL91xjOYNoWk
+      unagyu_mabushi   → price_1TmsjLLgdgJDHL911Wk1cQSx
+
+      注意：
+      HTML側の価格・合計金額は表示用です。
+      カード決済の正式な価格判定は、XServer上のPHP側で行ってください。
+    */
+
+    function openModal() {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      updateSummary();
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      hidePaymentChoice();
+    }
+
+    document.querySelectorAll(".js-open-modal").forEach(btn => {
+      btn.addEventListener("click", openModal);
+    });
+
+    document.querySelectorAll(".js-close-modal").forEach(btn => {
+      btn.addEventListener("click", closeModal);
+    });
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeModal();
+    });
+
+    function formatDateValue(date) {
+      const y = date.getFullYear();
+      const m = String(date.getMonth() + 1).padStart(2, "0");
+      const d = String(date.getDate()).padStart(2, "0");
+      return `${y}-${m}-${d}`;
+    }
+
+    function formatDateLabel(date) {
+      const days = ["日", "月", "火", "水", "木", "金", "土"];
+      const m = date.getMonth() + 1;
+      const d = date.getDate();
+      const day = days[date.getDay()];
+      return `${m}月${d}日（${day}）`;
+    }
+
+    function isDeliveryDay(date) {
+      const day = date.getDay();
+      return day === 5 || day === 6 || day === 0; // 金・土・日
+    }
+
+    function getWeeklyThursdayCutoff(deliveryDateObj) {
+      const date = new Date(deliveryDateObj);
+      const day = date.getDay();
+      const daysSinceThursday = day === 0 ? 3 : day - 4; // 金=1, 土=2, 日=3
+      date.setDate(date.getDate() - daysSinceThursday);
+      date.setHours(17, 0, 0, 0);
+      return date;
+    }
+
+    function isAcceptableDeliveryDate(deliveryDateObj, now = new Date()) {
+      if (!isDeliveryDay(deliveryDateObj)) return false;
+      return now < getWeeklyThursdayCutoff(deliveryDateObj);
+    }
+
+    function setupDeliveryDates() {
+      const now = new Date();
+      const options = [];
+      for (let i = 0; i < 42; i++) {
+        const date = new Date(now);
+        date.setHours(0, 0, 0, 0);
+        date.setDate(now.getDate() + i);
+
+        if (!isAcceptableDeliveryDate(date, now)) continue;
+
+        options.push({
+          value: formatDateValue(date),
+          label: formatDateLabel(date)
+        });
+      }
+
+      options.forEach(opt => {
+        const option = document.createElement("option");
+        option.value = opt.value;
+        option.textContent = opt.label;
+        deliveryDate.appendChild(option);
+      });
+    }
+
+    setupDeliveryDates();
+
+    function getQuantities() {
+      return Array.from(document.querySelectorAll(".qty-row")).map(row => {
+        const qty = Number(row.querySelector(".qty-num").textContent);
+        return {
+          row,
+          productId: row.dataset.productId,
+          item: row.dataset.item,
+          price: Number(row.dataset.price),
+          category: row.dataset.category || "",
+          qty
+        };
+      });
+    }
+
+    function getSelectedItems() {
+      return getQuantities().filter(item => item.qty > 0);
+    }
+
+    function getBentoCount() {
+      return getQuantities()
+        .filter(item => item.category === "bento")
+        .reduce((sum, item) => sum + item.qty, 0);
+    }
+
+    function getOrderTotal() {
+      return getSelectedItems().reduce((sum, item) => sum + item.price * item.qty, 0);
+    }
+
+    function getFormValues() {
+      return {
+        deliveryDateValue: deliveryDate.value,
+        deliveryDateText: deliveryDate.options[deliveryDate.selectedIndex]?.text || "未選択",
+        name: document.getElementById("customerName").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        zip: document.getElementById("zip").value.trim(),
+        address: document.getElementById("address").value.trim(),
+        note: document.getElementById("note").value.trim()
+      };
+    }
+
+    function updateSummary() {
+      const items = getSelectedItems();
+      const bentoCount = getBentoCount();
+      const total = getOrderTotal();
+
+      const values = getFormValues();
+      const name = values.name || "未入力";
+      const phone = values.phone || "未入力";
+      const address = values.address || "未入力";
+      const dateText = values.deliveryDateText || "未選択";
+      const note = values.note || "なし";
+
+      const itemText = items.length
+        ? items.map(item => `・${item.item} × ${item.qty}`).join("\n")
+        : "・未選択";
+
+      summaryBox.textContent =
+`【七宗遊園 夜専用弁当 予約内容】
+配達希望日：${dateText}
+お名前：${name}
+電話番号：${phone}
+ご住所：${address}
+
+ご注文内容：
+${itemText}
+
+お弁当合計：${bentoCount}個
+合計金額：${total.toLocaleString()}円
+備考：${note}`;
+    }
+
+    function hidePaymentChoice() {
+      paymentChoice.classList.remove("is-show");
+      paymentLoading.classList.remove("is-show");
+      cashPaymentBtn.disabled = false;
+      cardPaymentBtn.disabled = false;
+    }
+
+    function validateOrder() {
+      hidePaymentChoice();
+
+      const bentoCount = getBentoCount();
+
+      if (bentoCount < 2) {
+        bentoError.classList.add("is-show");
+        bentoError.scrollIntoView({ behavior: "smooth", block: "center" });
+        return false;
+      }
+
+      bentoError.classList.remove("is-show");
+
+      if (!form.reportValidity()) return false;
+
+      return true;
+    }
+
+    document.querySelectorAll(".qty-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const row = btn.closest(".qty-row");
+        const num = row.querySelector(".qty-num");
+        let value = Number(num.textContent);
+
+        if (btn.dataset.action === "plus") value += 1;
+        if (btn.dataset.action === "minus") value = Math.max(0, value - 1);
+
+        num.textContent = value;
+        bentoError.classList.remove("is-show");
+        hidePaymentChoice();
+        updateSummary();
+      });
+    });
+
+    form.addEventListener("input", () => {
+      hidePaymentChoice();
+      updateSummary();
+    });
+
+    form.addEventListener("change", () => {
+      hidePaymentChoice();
+      updateSummary();
+    });
+
+    document.getElementById("zipSearch").addEventListener("click", async () => {
+      const zip = document.getElementById("zip").value.replace(/[^0-9]/g, "");
+      if (!zip) return;
+
+      try {
+        const res = await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${zip}`);
+        const data = await res.json();
+        if (data.results && data.results[0]) {
+          const r = data.results[0];
+          document.getElementById("address").value = `${r.address1}${r.address2}${r.address3}`;
+          updateSummary();
+        }
+      } catch (error) {
+        // 住所検索が使えない場合も手入力できるため、何も表示しない。
+      }
+    });
+
+    function buildLineMessage(paymentMethod = "受け取り時に現金払い") {
+      updateSummary();
+
+      const items = getSelectedItems();
+      const total = getOrderTotal();
+      const values = getFormValues();
+
+      const itemText = items.length
+        ? items.map(item => `■ ${item.item}: ${item.qty}個`).join("\n")
+        : "■ 注文内容: 未選択";
+
+      return `【七宗遊園 夜専用弁当 予約リクエスト】
+■ 配達希望日: ${values.deliveryDateText}
+■ 代表者名: ${values.name || "未入力"} 様
+■ 電話番号: ${values.phone || "未入力"}
+■ 郵便番号: ${values.zip || "未入力"}
+■ ご住所: ${values.address || "未入力"}
+
+【ご注文内容】
+${itemText}
+
+■ 合計金額: ${total.toLocaleString()}円
+■ 支払い方法: ${paymentMethod}
+■ 備考・ご希望: ${values.note || "なし"}
+------------------------
+※上記の内容で予約をお願いします。`;
+    }
+
+    function openLineReservation(paymentMethod) {
+      const textMessage = buildLineMessage(paymentMethod);
+      const encodedText = encodeURIComponent(textMessage);
+      const lineUrl = `https://line.me/R/oaMessage/${LINE_ACCOUNT_ID}/?${encodedText}`;
+      window.open(lineUrl, "_blank");
+    }
+
+    function buildCheckoutPayload() {
+      const values = getFormValues();
+      return {
+        items: getSelectedItems().map(item => ({
+          productId: item.productId,
+          name: item.item,
+          quantity: item.qty
+        })),
+        customer: {
+          name: values.name,
+          phone: values.phone,
+          zip: values.zip,
+          address: values.address
+        },
+        delivery: {
+          date: values.deliveryDateValue,
+          dateText: values.deliveryDateText
+        },
+        note: values.note,
+        displayTotal: getOrderTotal(),
+        lineMessage: buildLineMessage("カード決済済み")
+      };
+    }
+
+    async function startCardCheckout() {
+      if (!validateOrder()) return;
+
+      paymentLoading.classList.add("is-show");
+      cashPaymentBtn.disabled = true;
+      cardPaymentBtn.disabled = true;
+
+      try {
+        const response = await fetch(CHECKOUT_ENDPOINT, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(buildCheckoutPayload())
+        });
+
+        const data = await response.json();
+
+        if (!response.ok || !data.url) {
+          throw new Error(data.error || "決済ページを作成できませんでした。");
+        }
+
+        window.location.href = data.url;
+      } catch (error) {
+        alert("カード決済ページの準備に失敗しました。恐れ入りますが、現金払いまたは電話注文をご利用ください。");
+        paymentLoading.classList.remove("is-show");
+        cashPaymentBtn.disabled = false;
+        cardPaymentBtn.disabled = false;
+      }
+    }
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!validateOrder()) return;
+
+      paymentChoice.classList.add("is-show");
+      paymentChoice.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+
+    cashPaymentBtn.addEventListener("click", () => {
+      if (!validateOrder()) return;
+      openLineReservation("受け取り時に現金払い");
+    });
+
+    cardPaymentBtn.addEventListener("click", startCardCheckout);
+
+    const floatingCta = document.querySelector(".floating-cta");
+    const pageCtas = document.querySelectorAll(".page-cta");
+
+    if (floatingCta && pageCtas.length) {
+      const visibleCtas = new Set();
+
+      const ctaObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            visibleCtas.add(entry.target);
+          } else {
+            visibleCtas.delete(entry.target);
+          }
+        });
+
+        floatingCta.classList.toggle("is-hidden", visibleCtas.size > 0);
+      }, {
+        threshold: 0.18,
+        rootMargin: "0px 0px -80px 0px"
+      });
+
+      pageCtas.forEach(cta => ctaObserver.observe(cta));
+    }
+  </script>
+</body>
+</html>
