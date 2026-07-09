@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>夜専用うなぎ弁当の宅配｜七宗遊園</title>
-  <meta name="description" content="七宗町内配達無料。三河産うなぎを使った夜専用弁当を金曜・土曜・日曜にお届けします。お届け週の木曜17:00までの完全予約制です。" />
+  <meta name="description" content="七宗町内配達無料。三河産うなぎを使った夜専用弁当を金曜・土曜・日曜にお届けします。前日17:00までの完全予約制です。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
@@ -1082,65 +1082,6 @@
       margin-bottom: 14px;
     }
 
-
-    .payment-choice {
-      display: none;
-      background: #fffaf0;
-      border: 2px solid rgba(196,154,69,.34);
-      border-radius: 18px;
-      padding: 15px;
-      margin: 16px 0 14px;
-    }
-
-    .payment-choice.is-show {
-      display: block;
-    }
-
-    .payment-title {
-      font-weight: 900;
-      color: var(--brown);
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    .payment-actions {
-      display: grid;
-      gap: 10px;
-    }
-
-    .btn-card {
-      background: var(--brown);
-      color: #fff7e8;
-      box-shadow: 0 10px 26px rgba(74, 47, 27, .22);
-    }
-
-    .btn-cash {
-      background: var(--line);
-      color: white;
-      box-shadow: 0 10px 26px rgba(6, 199, 85, .28);
-    }
-
-    .payment-note {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1.65;
-      margin-top: 10px;
-    }
-
-    .loading-text {
-      display: none;
-      color: var(--brown);
-      font-size: 13px;
-      font-weight: 900;
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .loading-text.is-show {
-      display: block;
-    }
-
     .submit-help {
       color: var(--muted);
       font-size: 12px;
@@ -1283,7 +1224,7 @@
 
           <div class="conditions" aria-label="注文条件">
             <div class="condition">七宗町内<br>配達無料</div>
-            <div class="condition">木曜17:00<br>締切</div>
+            <div class="condition">前日17:00<br>まで</div>
             <div class="condition">金・土・日<br>限定</div>
             <div class="condition">お弁当<br>2個から</div>
           </div>
@@ -1353,7 +1294,7 @@
               <div class="commitment-title">神渕(かぶち)の源流で泥抜き</div>
               <p class="commitment-text">
                 三河産うなぎを、<br>
-                神渕(かぶち)の清らかな水で<br>
+                神渕(かぶち)の清らかな源流の水で<br>
                 丁寧に泥抜きします。<br>
                 臭みを抑え、<br>
                 香ばしく焼き上げます。
@@ -1556,8 +1497,8 @@
                 <img src="lunchbox_images/cash.png" alt="現金引き換え">
               </div>
               <div>
-                <div class="rule-title">現金またはカード決済</div>
-                <div class="rule-sub">受取時の現金払い・事前カード決済に対応</div>
+                <div class="rule-title">受け取り時に現金支払い</div>
+                <div class="rule-sub">商品受け取り時</div>
               </div>
             </div>
         </div>
@@ -1572,7 +1513,7 @@
             <details class="faq-item">
               <summary>Q. 当日注文はできないの？</summary>
               <div class="faq-answer">
-                <p>申し訳ありません。配達時間やご注文内容の間違いを防ぐため、お届け週の木曜17:00までのご予約制とさせていただいております。</p>
+                <p>申し訳ありません。配達時間やご注文内容の間違いを防ぐため、まずは前日17:00までのご予約制とさせていただいております。</p>
               </div>
             </details>
 
@@ -1648,7 +1589,7 @@
       <span class="floating-main-text">予約する</span>
     </button>
     <div class="floating-sub">
-      <span>木曜17時締切</span>
+      <span>前日17時まで</span>
       <span>2個から</span>
       <a href="tel:0574461128">電話注文はこちら</a>
     </div>
@@ -1709,7 +1650,7 @@
           <div class="form-block">
             <div class="form-title">3. お弁当の数</div>
 
-            <div class="qty-row" data-product-id="unaju" data-item="三河産 うなぎ弁当" data-price="2700" data-category="bento">
+            <div class="qty-row" data-item="三河産 うなぎ弁当" data-price="2700" data-category="bento">
               <div>
                 <div class="qty-name">三河産 うなぎ弁当</div>
                 <div class="qty-price">通常3300円 → 税込2700円</div>
@@ -1721,7 +1662,7 @@
               </div>
             </div>
 
-            <div class="qty-row" data-product-id="hitsumabushi" data-item="三河産 ひつまぶし弁当" data-price="2900" data-category="bento">
+            <div class="qty-row" data-item="三河産 ひつまぶし弁当" data-price="2900" data-category="bento">
               <div>
                 <div class="qty-name">三河産 ひつまぶし弁当</div>
                 <div class="qty-price">通常3500円 → 税込2900円</div>
@@ -1733,7 +1674,7 @@
               </div>
             </div>
 
-            <div class="qty-row" data-product-id="unagyu_mabushi" data-item="極み うな牛まぶし弁当" data-price="3500" data-category="bento">
+            <div class="qty-row" data-item="極み うな牛まぶし弁当" data-price="3500" data-category="bento">
               <div>
                 <div class="qty-name">極み うな牛まぶし弁当</div>
                 <div class="qty-price">税込3500円</div>
@@ -1763,21 +1704,7 @@
             <span>内容を確認しました</span>
           </label>
 
-
-          <div class="payment-choice" id="paymentChoice" aria-live="polite">
-            <div class="payment-title">お支払い方法を選択してください</div>
-            <div class="payment-actions">
-              <button class="btn btn-cash" type="button" id="cashPaymentBtn">受け取り時に現金で支払う</button>
-              <button class="btn btn-card" type="button" id="cardPaymentBtn">カードで事前決済する</button>
-            </div>
-            <div class="payment-note">
-              現金払いはLINEへ注文内容を送信します。<br>
-              カード決済はStripeの安全な決済画面へ移動します。カード情報は七宗遊園では保持しません。
-            </div>
-            <div class="loading-text" id="paymentLoading">決済ページを準備しています...</div>
-          </div>
-
-          <button class="btn btn-line" type="submit">支払い方法を選んで予約する</button>
+          <button class="btn btn-line" type="submit">LINEを開いて予約する</button>
           <div class="submit-help">
             アカウント名：七宗遊園【弁当配達】
           </div>
@@ -1788,27 +1715,12 @@
 
   <script>
     const LINE_ACCOUNT_ID = "@602nbqce";
-    const CHECKOUT_ENDPOINT = "create-checkout-session.php";
     const modal = document.getElementById("reservationModal");
     const form = document.getElementById("reservationForm");
     const deliveryDate = document.getElementById("deliveryDate");
     const summaryBox = document.getElementById("summaryBox");
     const bentoError = document.getElementById("bentoError");
-    const paymentChoice = document.getElementById("paymentChoice");
-    const cashPaymentBtn = document.getElementById("cashPaymentBtn");
-    const cardPaymentBtn = document.getElementById("cardPaymentBtn");
-    const paymentLoading = document.getElementById("paymentLoading");
-
-    /*
-      Stripeサンドボックス価格ID対応表
-      unaju            → price_1Tmsd4LgdgJDHL91ixiMjzi5
-      hitsumabushi     → price_1TmsihLgdgJDHL91xjOYNoWk
-      unagyu_mabushi   → price_1TmsjLLgdgJDHL911Wk1cQSx
-
-      注意：
-      HTML側の価格・合計金額は表示用です。
-      カード決済の正式な価格判定は、XServer上のPHP側で行ってください。
-    */
+    
 
     function openModal() {
       modal.classList.add("is-open");
@@ -1821,7 +1733,6 @@
       modal.classList.remove("is-open");
       modal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
-      hidePaymentChoice();
     }
 
     document.querySelectorAll(".js-open-modal").forEach(btn => {
@@ -1840,13 +1751,6 @@
       if (event.key === "Escape") closeModal();
     });
 
-    function formatDateValue(date) {
-      const y = date.getFullYear();
-      const m = String(date.getMonth() + 1).padStart(2, "0");
-      const d = String(date.getDate()).padStart(2, "0");
-      return `${y}-${m}-${d}`;
-    }
-
     function formatDateLabel(date) {
       const days = ["日", "月", "火", "水", "木", "金", "土"];
       const m = date.getMonth() + 1;
@@ -1855,39 +1759,17 @@
       return `${m}月${d}日（${day}）`;
     }
 
-    function isDeliveryDay(date) {
-      const day = date.getDay();
-      return day === 5 || day === 6 || day === 0; // 金・土・日
-    }
-
-    function getWeeklyThursdayCutoff(deliveryDateObj) {
-      const date = new Date(deliveryDateObj);
-      const day = date.getDay();
-      const daysSinceThursday = day === 0 ? 3 : day - 4; // 金=1, 土=2, 日=3
-      date.setDate(date.getDate() - daysSinceThursday);
-      date.setHours(17, 0, 0, 0);
-      return date;
-    }
-
-    function isAcceptableDeliveryDate(deliveryDateObj, now = new Date()) {
-      if (!isDeliveryDay(deliveryDateObj)) return false;
-      return now < getWeeklyThursdayCutoff(deliveryDateObj);
-    }
-
     function setupDeliveryDates() {
       const now = new Date();
       const options = [];
-      for (let i = 0; i < 42; i++) {
+      for (let i = 0; i < 35; i++) {
         const date = new Date(now);
-        date.setHours(0, 0, 0, 0);
         date.setDate(now.getDate() + i);
+        const day = date.getDay();
+        if (day !== 5 && day !== 6 && day !== 0) continue;
 
-        if (!isAcceptableDeliveryDate(date, now)) continue;
-
-        options.push({
-          value: formatDateValue(date),
-          label: formatDateLabel(date)
-        });
+        const value = date.toISOString().split("T")[0];
+        options.push({ value, label: formatDateLabel(date) });
       }
 
       options.forEach(opt => {
@@ -1905,7 +1787,6 @@
         const qty = Number(row.querySelector(".qty-num").textContent);
         return {
           row,
-          productId: row.dataset.productId,
           item: row.dataset.item,
           price: Number(row.dataset.price),
           category: row.dataset.category || "",
@@ -1914,43 +1795,18 @@
       });
     }
 
-    function getSelectedItems() {
-      return getQuantities().filter(item => item.qty > 0);
-    }
-
-    function getBentoCount() {
-      return getQuantities()
+    function updateSummary() {
+      const items = getQuantities().filter(item => item.qty > 0);
+      const bentoCount = getQuantities()
         .filter(item => item.category === "bento")
         .reduce((sum, item) => sum + item.qty, 0);
-    }
+      const total = items.reduce((sum, item) => sum + item.price * item.qty, 0);
 
-    function getOrderTotal() {
-      return getSelectedItems().reduce((sum, item) => sum + item.price * item.qty, 0);
-    }
-
-    function getFormValues() {
-      return {
-        deliveryDateValue: deliveryDate.value,
-        deliveryDateText: deliveryDate.options[deliveryDate.selectedIndex]?.text || "未選択",
-        name: document.getElementById("customerName").value.trim(),
-        phone: document.getElementById("phone").value.trim(),
-        zip: document.getElementById("zip").value.trim(),
-        address: document.getElementById("address").value.trim(),
-        note: document.getElementById("note").value.trim()
-      };
-    }
-
-    function updateSummary() {
-      const items = getSelectedItems();
-      const bentoCount = getBentoCount();
-      const total = getOrderTotal();
-
-      const values = getFormValues();
-      const name = values.name || "未入力";
-      const phone = values.phone || "未入力";
-      const address = values.address || "未入力";
-      const dateText = values.deliveryDateText || "未選択";
-      const note = values.note || "なし";
+      const name = document.getElementById("customerName").value || "未入力";
+      const phone = document.getElementById("phone").value || "未入力";
+      const address = document.getElementById("address").value || "未入力";
+      const dateText = deliveryDate.options[deliveryDate.selectedIndex]?.text || "未選択";
+      const note = document.getElementById("note").value || "なし";
 
       const itemText = items.length
         ? items.map(item => `・${item.item} × ${item.qty}`).join("\n")
@@ -1971,31 +1827,6 @@ ${itemText}
 備考：${note}`;
     }
 
-    function hidePaymentChoice() {
-      paymentChoice.classList.remove("is-show");
-      paymentLoading.classList.remove("is-show");
-      cashPaymentBtn.disabled = false;
-      cardPaymentBtn.disabled = false;
-    }
-
-    function validateOrder() {
-      hidePaymentChoice();
-
-      const bentoCount = getBentoCount();
-
-      if (bentoCount < 2) {
-        bentoError.classList.add("is-show");
-        bentoError.scrollIntoView({ behavior: "smooth", block: "center" });
-        return false;
-      }
-
-      bentoError.classList.remove("is-show");
-
-      if (!form.reportValidity()) return false;
-
-      return true;
-    }
-
     document.querySelectorAll(".qty-btn").forEach(btn => {
       btn.addEventListener("click", () => {
         const row = btn.closest(".qty-row");
@@ -2007,20 +1838,12 @@ ${itemText}
 
         num.textContent = value;
         bentoError.classList.remove("is-show");
-        hidePaymentChoice();
         updateSummary();
       });
     });
 
-    form.addEventListener("input", () => {
-      hidePaymentChoice();
-      updateSummary();
-    });
-
-    form.addEventListener("change", () => {
-      hidePaymentChoice();
-      updateSummary();
-    });
+    form.addEventListener("input", updateSummary);
+    form.addEventListener("change", updateSummary);
 
     document.getElementById("zipSearch").addEventListener("click", async () => {
       const zip = document.getElementById("zip").value.replace(/[^0-9]/g, "");
@@ -2039,111 +1862,60 @@ ${itemText}
       }
     });
 
-    function buildLineMessage(paymentMethod = "受け取り時に現金払い") {
+    function buildLineMessage() {
       updateSummary();
 
-      const items = getSelectedItems();
-      const total = getOrderTotal();
-      const values = getFormValues();
+      const items = getQuantities().filter(item => item.qty > 0);
+      const total = items.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+      const name = document.getElementById("customerName").value || "未入力";
+      const phone = document.getElementById("phone").value || "未入力";
+      const zip = document.getElementById("zip").value || "未入力";
+      const address = document.getElementById("address").value || "未入力";
+      const dateText = deliveryDate.options[deliveryDate.selectedIndex]?.text || "未選択";
+      const note = document.getElementById("note").value || "なし";
 
       const itemText = items.length
         ? items.map(item => `■ ${item.item}: ${item.qty}個`).join("\n")
         : "■ 注文内容: 未選択";
 
       return `【七宗遊園 夜専用弁当 予約リクエスト】
-■ 配達希望日: ${values.deliveryDateText}
-■ 代表者名: ${values.name || "未入力"} 様
-■ 電話番号: ${values.phone || "未入力"}
-■ 郵便番号: ${values.zip || "未入力"}
-■ ご住所: ${values.address || "未入力"}
+■ 配達希望日: ${dateText}
+■ 代表者名: ${name} 様
+■ 電話番号: ${phone}
+■ 郵便番号: ${zip}
+■ ご住所: ${address}
 
 【ご注文内容】
 ${itemText}
 
 ■ 合計金額: ${total.toLocaleString()}円
-■ 支払い方法: ${paymentMethod}
-■ 備考・ご希望: ${values.note || "なし"}
+■ 備考・ご希望: ${note}
 ------------------------
 ※上記の内容で予約をお願いします。`;
-    }
-
-    function openLineReservation(paymentMethod) {
-      const textMessage = buildLineMessage(paymentMethod);
-      const encodedText = encodeURIComponent(textMessage);
-      const lineUrl = `https://line.me/R/oaMessage/${LINE_ACCOUNT_ID}/?${encodedText}`;
-      window.open(lineUrl, "_blank");
-    }
-
-    function buildCheckoutPayload() {
-      const values = getFormValues();
-      return {
-        items: getSelectedItems().map(item => ({
-          productId: item.productId,
-          name: item.item,
-          quantity: item.qty
-        })),
-        customer: {
-          name: values.name,
-          phone: values.phone,
-          zip: values.zip,
-          address: values.address
-        },
-        delivery: {
-          date: values.deliveryDateValue,
-          dateText: values.deliveryDateText
-        },
-        note: values.note,
-        displayTotal: getOrderTotal(),
-        lineMessage: buildLineMessage("カード決済済み")
-      };
-    }
-
-    async function startCardCheckout() {
-      if (!validateOrder()) return;
-
-      paymentLoading.classList.add("is-show");
-      cashPaymentBtn.disabled = true;
-      cardPaymentBtn.disabled = true;
-
-      try {
-        const response = await fetch(CHECKOUT_ENDPOINT, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(buildCheckoutPayload())
-        });
-
-        const data = await response.json();
-
-        if (!response.ok || !data.url) {
-          throw new Error(data.error || "決済ページを作成できませんでした。");
-        }
-
-        window.location.href = data.url;
-      } catch (error) {
-        alert("カード決済ページの準備に失敗しました。恐れ入りますが、現金払いまたは電話注文をご利用ください。");
-        paymentLoading.classList.remove("is-show");
-        cashPaymentBtn.disabled = false;
-        cardPaymentBtn.disabled = false;
-      }
     }
 
     form.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      if (!validateOrder()) return;
+      const bentoCount = getQuantities()
+        .filter(item => item.category === "bento")
+        .reduce((sum, item) => sum + item.qty, 0);
 
-      paymentChoice.classList.add("is-show");
-      paymentChoice.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (bentoCount < 2) {
+        bentoError.classList.add("is-show");
+        bentoError.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+
+      if (!form.reportValidity()) return;
+
+      const textMessage = buildLineMessage();
+      const encodedText = encodeURIComponent(textMessage);
+      const lineUrl = `https://line.me/R/oaMessage/${LINE_ACCOUNT_ID}/?${encodedText}`;
+
+      window.open(lineUrl, "_blank");
     });
-
-    cashPaymentBtn.addEventListener("click", () => {
-      if (!validateOrder()) return;
-      openLineReservation("受け取り時に現金払い");
-    });
-
-    cardPaymentBtn.addEventListener("click", startCardCheckout);
 
     const floatingCta = document.querySelector(".floating-cta");
     const pageCtas = document.querySelectorAll(".page-cta");
@@ -2168,6 +1940,7 @@ ${itemText}
 
       pageCtas.forEach(cta => ctaObserver.observe(cta));
     }
+
   </script>
 </body>
 </html>
