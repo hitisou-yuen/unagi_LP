@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>土用の丑 うなぎ弁当予約｜七宗遊園</title>
+  <meta name="description" content="2026年7月26日（日）土用の丑のお届け分。七宗遊園の三河産うなぎ弁当をご自宅までお届けします。七宗町内配達無料、7月23日（木）17:00までの予約専用LPです。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fbf3e4;
+      --bg-soft: #fffaf0;
+      --paper: #fff7e8;
+      --brown: #4a2f1b;
+      --brown-2: #6b4423;
+      --brown-3: #8a3b24;
+      --ink: #24170f;
+      --muted: #6f5a46;
+      --line: #06c755;
+      --line-dark: #04a845;
+      --tel: #315832;
+      --gold: #c49a45;
+      --cream: #f8ead0;
+      --white: #ffffff;
+      --danger: #b91c1c;
+      --shadow: 0 14px 36px rgba(59, 37, 21, .16);
+      --radius: 22px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(196,154,69,.16), transparent 32rem),
+        linear-gradient(180deg, #fff8eb 0%, var(--bg) 38%, #f7e8d0 100%);
+      font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      line-height: 1.75;
+      letter-spacing: .02em;
+      padding-bottom: calc(96px + var(--safe-bottom));
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .page {
+      width: min(100%, 480px);
+      margin: 0 auto;
+      background: rgba(255, 250, 240, .64);
+      box-shadow: 0 0 0 1px rgba(74, 47, 27, .04);
+      overflow: hidden;
+    }
+
+    .container {
+      width: min(100% - 32px, 440px);
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 248, 235, .92);
+      border-bottom: 1px solid rgba(107, 68, 35, .12);
+    }
+
+    .header-inner {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-main {
+      font-family: "Noto Serif JP", serif;
+      font-weight: 900;
+      font-size: 20px;
+      color: var(--brown);
+      letter-spacing: .08em;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    .header-cta {
+      background: var(--line);
+      color: white;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: 0 8px 20px rgba(6, 199, 85, .25);
+      white-space: nowrap;
+    }
+
+    .hero {
+      position: relative;
+      padding: 22px 0 34px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 0 34px 34px;
+      background:
+        linear-gradient(180deg, rgba(37, 23, 12, .55), rgba(37, 23, 12, .72)),
+        url("lunchbox_images/unagi2.png");
+      background-size: cover;
+      background-position: center;
+      min-height: 610px;
+      display: flex;
+      align-items: flex-end;
+      margin-top: -1px;
+    }
+
+    /* 画像未設定時の仮背景 */
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 68% 32%, rgba(224, 176, 82, .34), transparent 18rem),
+        linear-gradient(145deg, #2f1f14, #7a3b21 45%, #1f160f);
+      z-index: -1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 30px 16px 24px;
+      color: white;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 248, 235, .94);
+      color: var(--brown);
+      border: 1px solid rgba(255,255,255,.5);
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .hero-title {
+      font-family: "Noto Serif JP", serif;
+      font-size: clamp(42px, 13vw, 45px);
+      line-height: 1.14;
+      letter-spacing: .04em;
+      margin: 18px 0 18px;
+      text-shadow: 0 6px 26px rgba(0,0,0,.38);
+    }
+
+    .hero-lead {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.9;
+      margin: 0 0 20px;
+      text-shadow: 0 4px 18px rgba(0,0,0,.4);
+    }
+
+    .hero-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      width: 100%;
+      min-height: 60px;
+      border: 0;
+      border-radius: 16px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      font-weight: 900;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+      letter-spacing: .03em;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+      filter: brightness(.96);
+    }
+
+    .btn-line {
+      background: rgba(6, 199, 85, 0.75);
+      color: white;
+      box-shadow: 0 10px 26px rgba(6, 199, 85, .32);
+    }
+
+    .btn-tel {
+      background: rgba(247, 232, 208, 0.55);
+      box-shadow: 0 8px 20px rgba(0,0,0,.14);
+    }
+
+    .conditions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .condition {
+      background: rgba(0, 0, 0, .26);
+      color: #ffffff;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(6px);
+      text-shadow: 0 2px 5px rgba(0,0,0,.72);
+      border: 1px solid rgba(255,255,255,.58);
+      border-radius: 15px;
+      padding: 11px 9px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.45;
+      box-shadow: 0 8px 24px rgba(0,0,0,.1);
+    }
+
+    section {
+      padding: 52px 0;
+    }
+
+    .section-tight {
+      padding: 34px 0;
+    }
+
+    .eyebrow {
+      color: var(--brown-3);
+      font-size: 12px;
+      letter-spacing: .16em;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: "Noto Serif JP", serif;
+      color: var(--brown);
+      font-size: 30px;
+      line-height: 1.45;
+      margin: 0 0 18px;
+      letter-spacing: .04em;
+    }
+
+    .lead {
+      font-size: 17px;
+      font-weight: 500;
+      color: #342316;
+      margin: 0;
+    }
+
+    .card {
+      background: rgba(255, 250, 240, .9);
+      border: 1px solid rgba(107, 68, 35, .12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .story-card {
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(255,250,240,.93), rgba(255,247,232,.96));
+    }
+
+    .story-card::after {
+      content: "";
+      position: absolute;
+      right: 18px;
+      bottom: 16px;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      border: 1px solid rgba(196,154,69,.28);
+      opacity: .6;
+      pointer-events: none;
+    }
+
+    .product {
+      padding-top: 0;
+    }
+
+    .product-photo {
+      margin: 0 0 18px;
+      border-radius: 26px;
+      overflow: hidden;
+      min-height: 260px;
+      background:
+      url("lunchbox_images/hitumabusi.jpg");
+      background-size: cover;
+      background-position:10% center;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .product-photo::before {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: rgba(255,255,255,.92);
+      background:
+        radial-gradient(circle at 55% 35%, rgba(201,120,45,.36), transparent 10rem),
+        linear-gradient(135deg, #4a2f1b, #9a4a25);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: .03em;
+      z-index: -1;
+    }
+
+    .product-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+    .price-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 12px;
+      border-top: 1px solid rgba(107, 68, 35, .14);
+      margin-top: 18px;
+      padding-top: 16px;
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 900;
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--brown-3);
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .price small {
+      font-size: 15px;
+      margin-right: 4px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #efe1c3;
+      color: var(--brown);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+
+    .price-offer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+
+    .regular-price {
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .regular-price s {
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--brown-3);
+    }
+
+    .special-label {
+      display: inline-block;
+      color: var(--brown-3);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .05em;
+    }
+
+    .menu-price-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 6px 10px;
+      margin-top: 5px;
+    }
+
+    .menu-old-price {
+      color: var(--muted);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .menu-old-price s {
+      text-decoration-thickness: 2px;
+      text-decoration-color: var(--brown-3);
+    }
+
+    .menu-sale-price {
+      color: var(--brown-3);
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .footer {
+      position: relative;
+      padding: 44px 0 36px;
+      background:
+        radial-gradient(circle at top center, rgba(196,154,69,.18), transparent 18rem),
+        linear-gradient(180deg, #4a2f1b 0%, #2f1d12 100%);
+      color: #fff7e8;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+
+    .footer::before {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 22px;
+    }
+
+    .footer-copy {
+      margin-top: 8px;
+      color: #ead9bf;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .footer-contact {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      font-size: 13px;
+      color: #f3e5cf;
+      line-height: 1.9;
+    }
+
+    .footer-contact a {
+      color: #ffffff;
+      font-weight: 900;
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      font-size: 11px;
+      color: rgba(255,247,232,.62);
+      letter-spacing: .04em;
+    }
+
+
+    .commitment-section {
+      background:
+        linear-gradient(180deg, rgba(255,250,240,.96), rgba(248,234,208,.92));
+    }
+
+    .commitment-intro {
+      margin-bottom: 22px;
+    }
+
+    .commitment-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .commitment-item {
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(107, 68, 35, .13);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 10px 28px rgba(59, 37, 21, .08);
+    }
+
+    .commitment-number {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--brown);
+      color: #fff7e8;
+      font-family: "Noto Serif JP", serif;
+      font-size: 15px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .commitment-title {
+      font-family: "Noto Serif JP", serif;
+      color: var(--brown);
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .commitment-text {
+      margin: 0;
+      color: #342316;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.85;
+    }
+
+    .commitment-note {
+      margin-top: 18px;
+      background: var(--brown);
+      color: #fff7e8;
+      border-radius: 16px;
+      padding: 15px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .scene-grid {
+      display: grid;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .scene-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: rgba(255, 250, 240, .9);
+      border: 1px solid rgba(107, 68, 35, .12);
+      border-radius: 17px;
+      padding: 14px 15px;
+      font-weight: 900;
+      color: var(--brown);
+    }
+
+    .scene-num {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--brown);
+      color: white;
+      font-family: "Noto Serif JP", serif;
+    }
+
+    .quote-section {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.50), rgba(0,0,0,.50)),
+        url("lunchbox_images/unagi3.png");
+      background-size: cover;
+      background-position: center;
+      color: #fff7e8;
+    }
+
+    .quote-section h2 {
+      color: #fff7e8;
+      font-size: 26px;
+    }
+
+    .quote-section .lead {
+      color: #fff0d5;
+    }
+
+    .menu-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .menu-item {
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 13px;
+      align-items: center;
+      background: #fffaf0;
+      border: 1px solid rgba(107, 68, 35, .12);
+      border-radius: 18px;
+      padding: 10px;
+    }
+
+    .menu-thumb {
+      width: 74px;
+      height: 74px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #78401f, #e3b66c);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 11px;
+      font-weight: 900;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .menu-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .menu-name {
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1.35;
+    }
+
+    .menu-desc {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 4px;
+      line-height: 1.5;
+    }
+
+    .rules {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .rule {
+      background: #fffaf0;
+      border: 1px solid rgba(107, 68, 35, .13);
+      border-radius: 16px;
+      padding: 15px 15px;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .rule-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #efe1c3;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      color: var(--brown);
+    }
+
+    .rule-title {
+      font-weight: 900;
+      color: var(--brown);
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .rule-sub {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .final-cta {
+      background: linear-gradient(180deg, #fff7e8, #f0dcc0);
+      padding-bottom: 64px;
+    }
+
+    .notice {
+      background: #fffaf0;
+      border: 2px solid rgba(196,154,69,.34);
+      border-radius: 18px;
+      padding: 16px;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--brown);
+      margin: 20px 0;
+    }
+
+    .tel-info {
+      font-size: 15px;
+      color: var(--muted);
+      margin-top: 16px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+
+    .floating-cta {
+      position: fixed;
+      right: 14px;
+      bottom: calc(18px + var(--safe-bottom));
+      z-index: 100;
+      width: 132px;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      border-radius: 999px;
+      padding: 0;
+      transition: opacity .22s ease, transform .22s ease;
+    }
+
+    .floating-cta.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(14px);
+    }
+
+    .floating-main {
+      width: 132px;
+      min-height: 58px;
+      border-radius: 999px;
+      font-size: 15px;
+      line-height: 1.15;
+      flex-direction: column;
+      gap: 2px;
+      box-shadow: 0 10px 26px rgba(6, 199, 85, .34);
+      border: 1px solid rgba(255,255,255,.45);
+    }
+
+    .floating-small {
+      display: block;
+      font-size: 11px;
+      font-weight: 900;
+      line-height: 1;
+      opacity: .95;
+    }
+
+    .floating-main-text {
+      display: block;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.1;
+    }
+
+    .floating-sub {
+      display: none;
+    }
+
+    .floating-sub a {
+      color: var(--brown-3);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      background: rgba(23, 16, 11, .58);
+      padding-top: max(56px, env(safe-area-inset-top, 0px));
+    }
+
+    .modal.is-open {
+      display: flex;
+    }
+
+    .modal-panel {
+      width: min(calc(100% - 20px), 480px);
+      max-height: calc(100vh - max(72px, env(safe-area-inset-top, 0px)));
+      margin: 0 auto 10px;
+      overflow: auto;
+      overscroll-behavior: contain;
+      background: var(--bg-soft);
+      border-radius: 28px;
+      box-shadow: 0 -20px 60px rgba(0,0,0,.25);
+      padding-bottom: calc(22px + var(--safe-bottom));
+    }
+
+    .modal-header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: rgba(255, 250, 240, .98);
+      border-bottom: 1px solid rgba(107, 68, 35, .12);
+      padding: 18px 16px;
+      backdrop-filter: blur(14px);
+      border-radius: 28px 28px 0 0;
+    }
+
+    .modal-headline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .modal-title {
+      font-family: "Noto Serif JP", serif;
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1.2;
+    }
+
+    .close-btn {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 52px;
+      border: 2px solid rgba(107, 68, 35, .14);
+      border-radius: 50%;
+      background: #efe1c3;
+      color: var(--brown);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 6px 16px rgba(59, 37, 21, .14);
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    .close-btn:active {
+      transform: scale(.96);
+    }
+
+    .modal-body {
+      padding: 18px 16px 0;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 8px;
+      margin: 14px 0 22px;
+    }
+
+    .check-item {
+      background: white;
+      border-radius: 14px;
+      padding: 11px 13px;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--brown);
+      border: 1px solid rgba(107, 68, 35, .1);
+    }
+
+    .form-block {
+      background: white;
+      border: 1px solid rgba(107, 68, 35, .12);
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .form-title {
+      font-size: 17px;
+      font-weight: 900;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+
+    .field {
+      margin-bottom: 14px;
+    }
+
+    .field:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: block;
+      font-weight: 900;
+      color: var(--brown);
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+
+    .required {
+      display: inline-block;
+      margin-left: 6px;
+      background: var(--brown-3);
+      color: white;
+      border-radius: 999px;
+      padding: 2px 7px;
+      font-size: 11px;
+      vertical-align: middle;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      min-height: 54px;
+      border: 2px solid rgba(107, 68, 35, .18);
+      border-radius: 13px;
+      background: #fffdf8;
+      padding: 12px 13px;
+      color: var(--ink);
+      font-size: 17px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 96px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(196,154,69,.16);
+    }
+
+    .help {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    .zip-row {
+      display: grid;
+      grid-template-columns: 1fr 104px;
+      gap: 8px;
+    }
+
+    .small-btn {
+      border: 0;
+      border-radius: 12px;
+      background: var(--brown);
+      color: white;
+      font-weight: 900;
+      cursor: pointer;
+      min-height: 54px;
+    }
+
+    .qty-row {
+      display: grid;
+      grid-template-columns: 1fr 142px;
+      gap: 10px;
+      align-items: center;
+      border-top: 1px solid rgba(107, 68, 35, .1);
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+
+    .qty-row:first-child {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .qty-name {
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1.35;
+      font-size: 15px;
+    }
+
+    .qty-price {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .qty-control {
+      display: grid;
+      grid-template-columns: 42px 1fr 42px;
+      border: 2px solid rgba(107, 68, 35, .16);
+      border-radius: 13px;
+      overflow: hidden;
+      min-height: 46px;
+      background: #fffdf8;
+    }
+
+    .qty-btn {
+      border: 0;
+      background: #efe1c3;
+      color: var(--brown);
+      font-size: 24px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .qty-num {
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--ink);
+      background: white;
+    }
+
+    .error {
+      display: none;
+      color: var(--danger);
+      background: #fff1f1;
+      border: 1px solid rgba(185, 28, 28, .22);
+      border-radius: 13px;
+      padding: 10px 12px;
+      font-weight: 900;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+    .error.is-show {
+      display: block;
+    }
+
+    .confirm-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-weight: 900;
+      color: var(--brown);
+      margin: 16px 0;
+    }
+
+    .confirm-row input {
+      width: 24px;
+      height: 24px;
+      min-height: auto;
+      margin-top: 4px;
+      accent-color: var(--line);
+    }
+
+    .summary-box {
+      background: #fff7e8;
+      border: 1px dashed rgba(107, 68, 35, .35);
+      border-radius: 15px;
+      padding: 13px;
+      color: var(--brown);
+      font-size: 14px;
+      font-weight: 700;
+      white-space: pre-line;
+      margin-bottom: 14px;
+    }
+
+    .submit-help {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .faq-section {
+      background: #fffaf0;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .faq-item {
+      background: rgba(255, 250, 240, .96);
+      border: 1px solid rgba(107, 68, 35, .14);
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(59, 37, 21, .08);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 17px 46px 17px 16px;
+      font-weight: 900;
+      color: var(--brown);
+      line-height: 1.55;
+      position: relative;
+      font-size: 16px;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "＋";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #efe1c3;
+      color: var(--brown);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 16px 17px;
+      color: #342316;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.8;
+      border-top: 1px solid rgba(107, 68, 35, .10);
+      margin-top: -1px;
+    }
+
+    .faq-answer p {
+      margin: 14px 0 0;
+    }
+
+
+
+    /* 土用の丑 予約専用LP */
+    body.doyou-lp {
+      background:
+        radial-gradient(circle at 12% 5%, rgba(179, 18, 23, .12), transparent 16rem),
+        radial-gradient(circle at 90% 10%, rgba(196, 154, 69, .18), transparent 18rem),
+        repeating-linear-gradient(45deg, rgba(129, 38, 22, .025) 0 1px, transparent 1px 11px),
+        linear-gradient(180deg, #fbf1df 0%, #fff8ea 42%, #f3dec0 100%);
+      font-size: 17px;
+    }
+
+    .doyou-lp .page {
+      background:
+        radial-gradient(circle at 20% 7%, rgba(196,154,69,.13) 0 2px, transparent 3px 100%),
+        radial-gradient(circle at 78% 11%, rgba(196,154,69,.18) 0 2px, transparent 3px 100%),
+        linear-gradient(90deg, rgba(137,95,43,.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(255,250,240,.92), rgba(250,239,219,.95));
+      background-size: auto, auto, 18px 18px, auto;
+    }
+
+    .doyou-lp .site-header { background: rgba(251,241,223,.94); border-bottom: 2px solid rgba(156,22,25,.2); }
+    .doyou-lp .brand-main, .doyou-lp h2, .doyou-lp .modal-title, .doyou-lp .menu-name, .doyou-lp .footer-name { font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif; }
+    .doyou-lp .brand-sub { color: #8f171c; font-size: 12px; }
+    .doyou-lp section { position: relative; }
+
+    .doyou-lp .hero-card {
+      min-height: 690px; align-items: stretch; margin-top: 0; border-radius: 0 0 30px 30px; overflow: hidden;
+      background:
+        radial-gradient(circle at 92% 4%, rgba(143, 23, 28, .28) 0 58px, transparent 60px),
+        radial-gradient(circle at 8% 16%, rgba(16, 68, 108, .23) 0 42px, transparent 44px),
+        radial-gradient(circle at 20% 82%, rgba(16, 68, 108, .20) 0 50px, transparent 52px),
+        repeating-radial-gradient(circle at 50% 100%, transparent 0 12px, rgba(16, 68, 108, .16) 13px 15px, transparent 16px 30px),
+        repeating-linear-gradient(60deg, rgba(196,154,69,.15) 0 1px, transparent 1px 18px),
+        linear-gradient(180deg, #fff5e3 0%, #fff9ed 48%, #f5dfbd 100%);
+    }
+    .doyou-lp .hero-card::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 14% 23%, rgba(179,18,23,.7) 0 5px, transparent 6px), radial-gradient(circle at 10% 20%, rgba(18,76,120,.75) 0 5px, transparent 6px), radial-gradient(circle at 88% 8%, rgba(255,245,218,.5) 0 3px, transparent 4px), radial-gradient(circle at 85% 14%, rgba(255,245,218,.5) 0 3px, transparent 4px); pointer-events: none; opacity: .75; }
+    .doyou-lp .hero-content { color: var(--ink); padding: 28px 16px 22px; display: flex; flex-direction: column; text-align: center; }
+    .hero-kicker { font-family: "Noto Serif JP", serif; font-size: 28px; font-weight: 900; line-height: 1.25; letter-spacing: .05em; color: #15100c; margin-top: 6px; }
+    .hero-kicker .red { color: #9f1418; }
+    .doyou-lp .hero-title { color: #0f0d0b; font-size: clamp(62px, 19vw, 86px); line-height: 1; margin: 10px 0 12px; text-shadow: 0 4px 0 rgba(196,154,69,.14), 0 10px 22px rgba(50,30,12,.12); letter-spacing: .02em; }
+    .hero-subtitle { font-family: "Noto Serif JP", serif; font-size: 25px; font-weight: 900; letter-spacing: .05em; margin: 0 0 18px; color: #22160e; }
+    .red-ribbon, .section-ribbon { display: inline-flex; align-items: center; justify-content: center; align-self: center; background: linear-gradient(180deg, #a8191e, #7f1015); color: #fff5d9; border: 1px solid rgba(224,185,92,.9); box-shadow: inset 0 0 0 2px rgba(126,12,16,.45), 0 8px 18px rgba(93,31,16,.2); border-radius: 999px; padding: 8px 20px; font-family: "Noto Serif JP", serif; font-weight: 900; letter-spacing: .08em; line-height: 1.35; }
+    .red-ribbon.large { font-size: 21px; border-radius: 12px; width: min(100%, 390px); margin: 6px auto 10px; }
+    .hero-image { position: relative; width: min(100%, 440px); margin: 8px auto 10px; border-radius: 22px; overflow: hidden; box-shadow: 0 18px 36px rgba(61,35,13,.18); border: 3px solid rgba(196,154,69,.45); background: #efe1c3; }
+    .hero-image img { width: 100%; height: 250px; object-fit: cover; }
+    .stamp { position: absolute; right: 12px; top: 12px; width: 82px; height: 82px; border: 4px solid rgba(20,15,10,.86); border-radius: 50%; display: grid; place-items: center; font-family: "Noto Serif JP", serif; font-size: 25px; font-weight: 900; line-height: 1.05; transform: rotate(-9deg); color: #111; background: rgba(255,247,232,.62); }
+    .doyou-lp .hero-lead { color: #2b1b10; text-shadow: none; font-size: 18px; font-weight: 700; line-height: 1.75; margin-bottom: 14px; }
+    .doyou-lp .conditions { grid-template-columns: 1fr 1fr; margin-top: 14px; }
+    .doyou-lp .condition { background: rgba(255,250,240,.86); color: #371f10; border: 1px solid rgba(143,23,28,.28); text-shadow: none; font-size: 15px; font-weight: 900; }
+    .doyou-lp .btn-line { background: linear-gradient(180deg, #06c755, #04a845); color: #fff; }
+    .doyou-lp .btn-tel { background: linear-gradient(180deg, #102e47, #071b2a); color: #fff7e8; border: 1px solid rgba(224,185,92,.55); }
+    .normal-order-link { margin-top: 14px; padding: 14px 16px; border-radius: 14px; background: rgba(255,250,240,.9); border: 1px solid rgba(143,23,28,.22); color: #371f10; font-size: 15px; font-weight: 900; line-height: 1.6; text-align: center; box-shadow: 0 8px 20px rgba(59,37,21,.08); }
+    .normal-order-link a { color: #8f171c; text-decoration: underline; text-underline-offset: 4px; }
+    .paper-panel, .knowledge-card, .kakegami-card, .order-card { background: linear-gradient(90deg, rgba(143,23,28,.05) 1px, transparent 1px), linear-gradient(180deg, rgba(255,250,240,.95), rgba(255,246,229,.98)); background-size: 14px 14px, auto; border: 2px solid rgba(180,126,47,.42); border-radius: 8px; box-shadow: 0 14px 32px rgba(59,37,21,.1); padding: 20px; position: relative; }
+    .paper-panel::before, .knowledge-card::before, .kakegami-card::before, .order-card::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(143,23,28,.23); pointer-events: none; border-radius: 4px; }
+    .doyou-lp .lead { font-size: 17px; line-height: 1.9; }
+    .doyou-lp .menu-item { grid-template-columns: 92px 1fr; border: 2px solid rgba(143,23,28,.18); border-radius: 10px; background: rgba(255,250,240,.96); padding: 12px; }
+    .doyou-lp .menu-thumb { width: 92px; height: 92px; border-radius: 8px; }
+    .doyou-lp .menu-name { font-size: 20px; }
+    .doyou-lp .menu-desc { color: #342316; font-size: 14px; font-weight: 700; }
+    .doyou-lp .menu-sale-price, .doyou-lp .price { color: #9f1418; font-size: 24px; }
+    .knowledge-title { font-family: "Noto Serif JP", serif; font-size: 22px; color: #8f171c; font-weight: 900; margin-bottom: 10px; }
+    .kakegami-card { display: grid; gap: 14px; align-items: center; }
+    .kakegami-image { border-radius: 14px; overflow: hidden; border: 2px solid rgba(196,154,69,.4); box-shadow: 0 10px 24px rgba(59,37,21,.12); }
+    .kakegami-image img { width: 100%; height: 170px; object-fit: cover; }
+    .order-grid { display: grid; gap: 10px; margin-top: 20px; }
+    .order-card { padding: 16px 16px 16px 18px; font-weight: 900; color: #2a1a0e; }
+    .order-card span { display: block; color: #8f171c; font-family: "Noto Serif JP", serif; font-size: 15px; margin-bottom: 2px; }
+    .doyou-lp .final-cta { background: repeating-linear-gradient(135deg, rgba(224,185,92,.12) 0 2px, transparent 2px 14px), linear-gradient(180deg, #fff5df, #f0d4a6); }
+    .deadline-band { margin: 18px 0; padding: 16px; border-radius: 10px; background: linear-gradient(180deg, #9f1418, #741014); color: #ffe9b1; font-family: "Noto Serif JP", serif; font-weight: 900; font-size: 24px; text-align: center; border: 2px solid rgba(224,185,92,.75); box-shadow: inset 0 0 0 2px rgba(89,10,10,.45); }
+    .doyou-lp .footer { background: repeating-linear-gradient(135deg, rgba(224,185,92,.08) 0 1px, transparent 1px 10px), linear-gradient(180deg, #102e47, #071b2a); }
+    .doyou-lp .modal-panel, .doyou-lp .modal-header, .doyou-lp .form-block { background: #fff8eb; }
+
+    /* 浮世絵調の再構築レイヤー */
+    :root {
+      --ukiyo-red: #a2161b;
+      --ukiyo-red-dark: #651014;
+      --ukiyo-blue: #123f63;
+      --ukiyo-blue-dark: #08243a;
+      --ukiyo-gold: #c99b3f;
+      --ukiyo-ink: #15100c;
+      --ukiyo-paper: #fff3dc;
+    }
+
+    body.doyou-lp {
+      background:
+        radial-gradient(circle at 14% 7%, rgba(162,22,27,.16), transparent 15rem),
+        radial-gradient(circle at 88% 8%, rgba(18,63,99,.16), transparent 17rem),
+        repeating-linear-gradient(0deg, rgba(42,26,14,.025) 0 1px, transparent 1px 5px),
+        repeating-linear-gradient(90deg, rgba(42,26,14,.018) 0 1px, transparent 1px 7px),
+        linear-gradient(180deg, #f5dfbc 0%, #fff4df 34%, #eed0a4 100%);
+    }
+
+    .doyou-lp .page {
+      position: relative;
+      background:
+        radial-gradient(circle at 12% 8%, rgba(162,22,27,.08) 0 3px, transparent 4px),
+        radial-gradient(circle at 88% 12%, rgba(201,155,63,.13) 0 2px, transparent 3px),
+        repeating-linear-gradient(30deg, rgba(201,155,63,.08) 0 1px, transparent 1px 18px),
+        linear-gradient(180deg, rgba(255,246,229,.96), rgba(251,235,205,.98));
+      border-left: 1px solid rgba(21,16,12,.1);
+      border-right: 1px solid rgba(21,16,12,.1);
+    }
+
+    .doyou-lp .site-header {
+      background:
+        repeating-linear-gradient(135deg, rgba(201,155,63,.12) 0 1px, transparent 1px 12px),
+        rgba(255,244,223,.95);
+      border-bottom: 3px double rgba(21,16,12,.42);
+    }
+
+    .doyou-lp .brand-main {
+      color: var(--ukiyo-ink);
+      text-shadow: 1px 1px 0 rgba(201,155,63,.32);
+    }
+
+    .doyou-lp .hero-card {
+      min-height: 730px;
+      border-radius: 0 0 12px 12px;
+      border-bottom: 5px solid var(--ukiyo-blue-dark);
+      background:
+        radial-gradient(circle at 96% 0%, rgba(162,22,27,.95) 0 58px, transparent 60px),
+        radial-gradient(circle at 99% 0%, transparent 0 18px, rgba(255,237,197,.55) 19px 20px, transparent 21px 34px),
+        radial-gradient(circle at 10% 20%, rgba(18,63,99,.88) 0 28px, transparent 30px),
+        radial-gradient(circle at 17% 25%, rgba(162,22,27,.82) 0 22px, transparent 24px),
+        radial-gradient(circle at 9% 33%, rgba(18,63,99,.78) 0 24px, transparent 26px),
+        radial-gradient(circle at 85% 32%, rgba(201,155,63,.2) 0 2px, transparent 3px),
+        repeating-radial-gradient(circle at 50% 103%, transparent 0 12px, rgba(18,63,99,.65) 13px 16px, transparent 17px 30px),
+        repeating-linear-gradient(60deg, rgba(201,155,63,.18) 0 1px, transparent 1px 19px),
+        linear-gradient(180deg, #fff4dc 0%, #fff8e9 45%, #f3d7aa 100%);
+    }
+
+    .doyou-lp .hero-card::before {
+      content: "";
+      position: absolute;
+      right: -58px;
+      top: -54px;
+      width: 174px;
+      height: 174px;
+      border-radius: 50%;
+      background:
+        repeating-conic-gradient(from 10deg, rgba(101,16,20,.96) 0 7deg, rgba(174,51,32,.96) 7deg 13deg, rgba(255,221,160,.7) 13deg 15deg),
+        radial-gradient(circle at center, #1b0e08 0 8px, transparent 9px);
+      border: 5px solid rgba(21,16,12,.72);
+      box-shadow: 0 8px 0 rgba(21,16,12,.08);
+      opacity: .9;
+      pointer-events: none;
+    }
+
+    .doyou-lp .hero-card::after {
+      background:
+        radial-gradient(circle at 15% 18%, rgba(255,246,229,.5) 0 3px, transparent 4px),
+        radial-gradient(circle at 9% 21%, rgba(255,246,229,.5) 0 3px, transparent 4px),
+        radial-gradient(circle at 86% 19%, rgba(201,155,63,.9) 0 2px, transparent 3px),
+        radial-gradient(circle at 79% 26%, rgba(201,155,63,.8) 0 2px, transparent 3px),
+        linear-gradient(90deg, transparent 0 8%, rgba(21,16,12,.06) 8% 8.4%, transparent 8.4% 91.6%, rgba(21,16,12,.06) 91.6% 92%, transparent 92%);
+      opacity: 1;
+    }
+
+    .doyou-lp .hero-content {
+      position: relative;
+      isolation: isolate;
+      padding-top: 30px;
+    }
+
+    .doyou-lp .hero-content::before,
+    .doyou-lp .hero-content::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .doyou-lp .hero-content::before {
+      left: -24px;
+      top: 78px;
+      width: 118px;
+      height: 190px;
+      background:
+        radial-gradient(circle at 38% 16%, #174e7d 0 9px, transparent 10px),
+        radial-gradient(circle at 58% 28%, #9f1a1f 0 8px, transparent 9px),
+        radial-gradient(circle at 34% 42%, #174e7d 0 8px, transparent 9px),
+        linear-gradient(90deg, rgba(41,75,48,.45) 0 4px, transparent 5px);
+      opacity: .72;
+      transform: rotate(-9deg);
+    }
+
+    .doyou-lp .hero-content::after {
+      right: -18px;
+      bottom: 84px;
+      width: 130px;
+      height: 70px;
+      background:
+        radial-gradient(ellipse at 15% 85%, transparent 0 22px, rgba(18,63,99,.62) 23px 27px, transparent 28px),
+        radial-gradient(ellipse at 45% 85%, transparent 0 22px, rgba(18,63,99,.62) 23px 27px, transparent 28px),
+        radial-gradient(ellipse at 75% 85%, transparent 0 22px, rgba(18,63,99,.62) 23px 27px, transparent 28px);
+      opacity: .9;
+    }
+
+    .hero-kicker {
+      display: inline-block;
+      align-self: center;
+      padding: 4px 18px 7px;
+      background: rgba(255,246,229,.76);
+      border-top: 2px solid var(--ukiyo-ink);
+      border-bottom: 2px solid var(--ukiyo-ink);
+      font-size: 30px;
+    }
+
+    .doyou-lp .hero-title {
+      display: inline-block;
+      align-self: center;
+      padding: 2px 12px 10px;
+      color: #090706;
+      font-size: clamp(68px, 20vw, 92px);
+      letter-spacing: .04em;
+      text-shadow:
+        2px 2px 0 rgba(201,155,63,.35),
+        -1px 0 0 rgba(21,16,12,.55),
+        0 8px 18px rgba(65,32,12,.14);
+      filter: contrast(1.08);
+    }
+
+    .hero-subtitle {
+      width: fit-content;
+      max-width: 100%;
+      align-self: center;
+      padding: 2px 10px 5px;
+      background: rgba(255,246,229,.7);
+      border-bottom: 2px solid rgba(21,16,12,.55);
+      font-size: 24px;
+    }
+
+    .red-ribbon,
+    .section-ribbon,
+    .deadline-band {
+      background:
+        linear-gradient(90deg, transparent 0 12px, rgba(255,236,181,.13) 12px 13px, transparent 13px),
+        linear-gradient(180deg, var(--ukiyo-red), var(--ukiyo-red-dark));
+      border: 2px solid var(--ukiyo-gold);
+      border-radius: 4px;
+      box-shadow:
+        inset 0 0 0 2px rgba(101,16,20,.72),
+        4px 5px 0 rgba(21,16,12,.14);
+    }
+
+    .red-ribbon.large {
+      position: relative;
+      transform: rotate(-1deg);
+    }
+
+    .red-ribbon.large::before,
+    .red-ribbon.large::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 32px;
+      background: var(--ukiyo-red-dark);
+      transform: translateY(-50%) rotate(45deg);
+      z-index: -1;
+    }
+
+    .red-ribbon.large::before { left: -9px; }
+    .red-ribbon.large::after { right: -9px; }
+
+    .hero-image {
+      border-radius: 4px;
+      border: 4px solid var(--ukiyo-ink);
+      box-shadow:
+        7px 8px 0 rgba(18,63,99,.2),
+        0 18px 34px rgba(61,35,13,.12);
+      transform: rotate(.4deg);
+    }
+
+    .hero-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 1px, transparent 1px 5px),
+        linear-gradient(180deg, transparent 70%, rgba(8,36,58,.2));
+      pointer-events: none;
+      mix-blend-mode: multiply;
+    }
+
+    .stamp {
+      background: rgba(255,246,229,.78);
+      border: 5px solid rgba(21,16,12,.9);
+      border-style: double;
+      box-shadow: 2px 3px 0 rgba(21,16,12,.18);
+    }
+
+    .doyou-lp .condition,
+    .normal-order-link {
+      border: 2px solid rgba(21,16,12,.52);
+      border-radius: 4px;
+      background:
+        repeating-linear-gradient(135deg, rgba(201,155,63,.12) 0 1px, transparent 1px 9px),
+        rgba(255,246,229,.9);
+      box-shadow: 3px 4px 0 rgba(18,63,99,.13);
+    }
+
+    .doyou-lp .btn {
+      border-radius: 4px;
+      border: 2px solid rgba(21,16,12,.62);
+      box-shadow: 5px 6px 0 rgba(21,16,12,.16);
+    }
+
+    .doyou-lp .btn-line {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.12), transparent),
+        #05b94f;
+    }
+
+    .doyou-lp .btn-tel {
+      background:
+        repeating-linear-gradient(135deg, rgba(201,155,63,.18) 0 1px, transparent 1px 9px),
+        linear-gradient(180deg, var(--ukiyo-blue), var(--ukiyo-blue-dark));
+    }
+
+    .paper-panel,
+    .knowledge-card,
+    .kakegami-card,
+    .order-card,
+    .doyou-lp .menu-item,
+    .faq-item {
+      border: 3px solid rgba(21,16,12,.68);
+      border-radius: 4px;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(201,155,63,.14) 0 2px, transparent 3px),
+        repeating-linear-gradient(0deg, rgba(21,16,12,.025) 0 1px, transparent 1px 6px),
+        linear-gradient(180deg, #fff6e5, #f9e6c6);
+      box-shadow: 6px 7px 0 rgba(18,63,99,.12);
+    }
+
+    .paper-panel::before,
+    .knowledge-card::before,
+    .kakegami-card::before,
+    .order-card::before {
+      inset: 7px;
+      border: 2px solid rgba(162,22,27,.45);
+      border-radius: 0;
+    }
+
+    .doyou-lp section:not(.hero-card):not(.final-cta)::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 28px;
+      background:
+        radial-gradient(ellipse at 8% 100%, transparent 0 13px, rgba(18,63,99,.42) 14px 17px, transparent 18px),
+        radial-gradient(ellipse at 24% 100%, transparent 0 13px, rgba(18,63,99,.42) 14px 17px, transparent 18px),
+        radial-gradient(ellipse at 40% 100%, transparent 0 13px, rgba(18,63,99,.42) 14px 17px, transparent 18px),
+        radial-gradient(ellipse at 56% 100%, transparent 0 13px, rgba(18,63,99,.42) 14px 17px, transparent 18px),
+        radial-gradient(ellipse at 72% 100%, transparent 0 13px, rgba(18,63,99,.42) 14px 17px, transparent 18px),
+        radial-gradient(ellipse at 88% 100%, transparent 0 13px, rgba(18,63,99,.42) 14px 17px, transparent 18px);
+      opacity: .42;
+      pointer-events: none;
+    }
+
+    .doyou-lp h2 {
+      position: relative;
+      display: inline-block;
+      color: var(--ukiyo-ink);
+      padding: 0 4px 8px;
+      text-shadow: 1px 1px 0 rgba(201,155,63,.34);
+    }
+
+    .doyou-lp h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--ukiyo-red), var(--ukiyo-gold), transparent);
+    }
+
+    .doyou-lp .menu-list {
+      gap: 16px;
+    }
+
+    .doyou-lp .menu-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .doyou-lp .menu-item::before {
+      content: "お品書き";
+      position: absolute;
+      right: -26px;
+      top: 14px;
+      width: 104px;
+      padding: 4px 0;
+      transform: rotate(39deg);
+      background: var(--ukiyo-red);
+      color: #fff3d1;
+      font-family: "Noto Serif JP", serif;
+      font-size: 11px;
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: .08em;
+      border-top: 1px solid var(--ukiyo-gold);
+      border-bottom: 1px solid var(--ukiyo-gold);
+    }
+
+    .doyou-lp .menu-thumb {
+      border: 2px solid rgba(21,16,12,.72);
+      border-radius: 2px;
+      box-shadow: 3px 3px 0 rgba(21,16,12,.14);
+    }
+
+    .doyou-lp .menu-sale-price {
+      display: inline-block;
+      padding: 2px 8px 4px;
+      color: #fff1c8;
+      background: var(--ukiyo-red);
+      border: 1px solid var(--ukiyo-gold);
+      font-family: "Noto Serif JP", serif;
+      line-height: 1.35;
+    }
+
+    .knowledge-card {
+      background:
+        linear-gradient(90deg, transparent 0 72%, rgba(162,22,27,.08) 72% 73%, transparent 73%),
+        repeating-linear-gradient(90deg, rgba(21,16,12,.04) 0 1px, transparent 1px 34px),
+        linear-gradient(180deg, #fff7e7, #f9e6c8);
+    }
+
+    .knowledge-title {
+      display: inline-block;
+      padding: 3px 12px 5px;
+      color: #fff0cd;
+      background: var(--ukiyo-blue);
+      border: 2px solid var(--ukiyo-gold);
+      box-shadow: 3px 4px 0 rgba(21,16,12,.12);
+    }
+
+    .kakegami-image {
+      border-radius: 2px;
+      border: 4px solid rgba(21,16,12,.72);
+      box-shadow: 5px 6px 0 rgba(162,22,27,.14);
+      transform: rotate(-1.2deg);
+    }
+
+    .order-card span {
+      color: #fff0cd;
+      background: var(--ukiyo-blue);
+      display: inline-block;
+      padding: 1px 9px 3px;
+      border: 1px solid var(--ukiyo-gold);
+      margin-bottom: 6px;
+    }
+
+    .faq-section {
+      background:
+        repeating-radial-gradient(circle at 0 100%, transparent 0 13px, rgba(18,63,99,.16) 14px 16px, transparent 17px 28px),
+        linear-gradient(180deg, #fff2dc, #f8dfb8);
+    }
+
+    .faq-item summary {
+      color: var(--ukiyo-ink);
+      background: rgba(255,246,229,.45);
+    }
+
+    .final-cta {
+      border-top: 5px solid var(--ukiyo-blue-dark);
+      border-bottom: 5px solid var(--ukiyo-red-dark);
+    }
+
+    .doyou-lp .final-cta {
+      background:
+        radial-gradient(circle at 14% 28%, rgba(162,22,27,.18) 0 38px, transparent 40px),
+        radial-gradient(circle at 86% 14%, rgba(18,63,99,.16) 0 44px, transparent 46px),
+        repeating-linear-gradient(135deg, rgba(201,155,63,.18) 0 1px, transparent 1px 12px),
+        linear-gradient(180deg, #fff0d2, #eecb94);
+    }
+
+    .doyou-lp .footer {
+      border-top: 4px solid var(--ukiyo-gold);
+      background:
+        repeating-radial-gradient(circle at 50% 0%, transparent 0 12px, rgba(201,155,63,.14) 13px 15px, transparent 16px 28px),
+        linear-gradient(180deg, var(--ukiyo-blue), var(--ukiyo-blue-dark));
+    }
+
+    .doyou-lp .floating-main {
+      border-radius: 4px;
+      border: 2px solid rgba(21,16,12,.72);
+      box-shadow: 5px 6px 0 rgba(21,16,12,.18);
+    }
+
+    .doyou-lp .modal-panel {
+      border: 3px solid rgba(21,16,12,.72);
+      border-radius: 12px;
+    }
+
+    .doyou-lp .form-block {
+      border: 2px solid rgba(21,16,12,.38);
+      border-radius: 4px;
+      box-shadow: 3px 4px 0 rgba(18,63,99,.08);
+    }
+
+    /* 視認性調整: ヒーローは淡い青海波背景に、注文条件は整列感を優先 */
+    .doyou-lp .hero-card {
+      background:
+        radial-gradient(ellipse at 7% 100%, transparent 0 20px, rgba(238,203,119,.72) 21px 24px, transparent 25px),
+        radial-gradient(ellipse at 19% 100%, transparent 0 20px, rgba(238,203,119,.72) 21px 24px, transparent 25px),
+        radial-gradient(ellipse at 31% 100%, transparent 0 20px, rgba(238,203,119,.72) 21px 24px, transparent 25px),
+        radial-gradient(ellipse at 43% 100%, transparent 0 20px, rgba(238,203,119,.72) 21px 24px, transparent 25px),
+        radial-gradient(ellipse at 55% 100%, transparent 0 20px, rgba(238,203,119,.72) 21px 24px, transparent 25px),
+        radial-gradient(ellipse at 67% 100%, transparent 0 20px, rgba(238,203,119,.72) 21px 24px, transparent 25px),
+        radial-gradient(ellipse at 79% 100%, transparent 0 20px, rgba(238,203,119,.72) 21px 24px, transparent 25px),
+        radial-gradient(ellipse at 91% 100%, transparent 0 20px, rgba(238,203,119,.72) 21px 24px, transparent 25px),
+        radial-gradient(ellipse at 13% 100%, transparent 0 34px, rgba(238,203,119,.48) 35px 38px, transparent 39px),
+        radial-gradient(ellipse at 37% 100%, transparent 0 34px, rgba(238,203,119,.48) 35px 38px, transparent 39px),
+        radial-gradient(ellipse at 61% 100%, transparent 0 34px, rgba(238,203,119,.48) 35px 38px, transparent 39px),
+        radial-gradient(ellipse at 85% 100%, transparent 0 34px, rgba(238,203,119,.48) 35px 38px, transparent 39px),
+        radial-gradient(circle at 12% 16%, rgba(18,63,99,.10) 0 44px, transparent 46px),
+        radial-gradient(circle at 88% 10%, rgba(162,22,27,.08) 0 58px, transparent 60px),
+        repeating-linear-gradient(135deg, rgba(201,155,63,.08) 0 1px, transparent 1px 18px),
+        linear-gradient(180deg, #fffaf0 0%, #fff7e8 54%, #fff1d7 100%);
+      border-bottom-color: rgba(18,63,99,.55);
+    }
+
+    .doyou-lp .hero-card::before {
+      opacity: .34;
+      filter: saturate(.82) brightness(1.2);
+    }
+
+    .doyou-lp .hero-card::after {
+      background:
+        radial-gradient(circle at 86% 19%, rgba(201,155,63,.44) 0 2px, transparent 3px),
+        radial-gradient(circle at 79% 26%, rgba(201,155,63,.36) 0 2px, transparent 3px),
+        linear-gradient(90deg, transparent 0 8%, rgba(21,16,12,.025) 8% 8.4%, transparent 8.4% 91.6%, rgba(21,16,12,.025) 91.6% 92%, transparent 92%);
+      opacity: .72;
+    }
+
+    .doyou-lp .hero-content::before {
+      opacity: .28;
+      filter: saturate(.8) brightness(1.18);
+    }
+
+    .doyou-lp .hero-content::after {
+      opacity: .35;
+    }
+
+    .hero-kicker,
+    .hero-subtitle {
+      background: rgba(255,250,240,.88);
+    }
+
+    .doyou-lp .hero-title {
+      background: rgba(255,250,240,.34);
+      border-radius: 8px;
+    }
+
+    .order-grid {
+      gap: 14px;
+    }
+
+    .order-card {
+      display: grid;
+      grid-template-columns: minmax(108px, 34%) 1fr;
+      align-items: center;
+      column-gap: 16px;
+      padding: 18px 20px;
+      min-height: 78px;
+      text-align: left;
+    }
+
+    .order-card span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 44px;
+      margin: 0;
+      padding: 4px 10px 6px;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    @media (max-width: 390px) {
+      .order-card {
+        grid-template-columns: 96px 1fr;
+        column-gap: 12px;
+        padding: 16px 14px;
+      }
+
+      .order-card span {
+        min-height: 40px;
+        padding-inline: 8px;
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 520px) {
+      body {
+        background-color: #ead7bd;
+      }
+
+      .page {
+        min-height: 100vh;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .container {
+        width: min(100% - 24px, 440px);
+      }
+
+      .hero-title {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .conditions {
+        grid-template-columns: 1fr;
+      }
+
+      .qty-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="doyou-lp">
+  <div class="page">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#" class="brand" aria-label="七宗遊園 トップへ">
+          <span class="brand-main">七宗遊園</span>
+          <span class="brand-sub">土用の丑 予約専用</span>
+        </a>
+      </div>
+    </header>
+
+
+    <main>
+      <section class="hero-card" aria-label="土用の丑 うなぎ弁当予約">
+        <div class="hero-content">
+          <div class="hero-kicker">7月26日<span class="red">（日）</span>は</div>
+          <h1 class="hero-title">土用の丑</h1>
+          <p class="hero-subtitle">七宗遊園がご自宅までお届けします</p>
+          <div class="red-ribbon large">ご予約承り中<br>7月26日（日）お届け分</div>
+          <div class="hero-image" aria-label="三河産ひつまぶし弁当の写真"><img src="lunchbox_images/hitumabusi.jpg" alt="三河産ひつまぶし弁当"><div class="stamp">三河<br>産</div></div>
+          <p class="hero-lead">ご予約締切：7月23日（木）17:00まで<br>七宗町内 配達無料・お弁当2個から</p>
+          <div class="hero-actions"><button class="btn btn-line js-open-modal page-cta" type="button">LINEで予約する</button><a class="btn btn-tel page-cta" href="tel:0574461128">電話で予約する</a></div>
+          <div class="conditions" aria-label="注文条件"><div class="condition">7月26日（日）<br>お届け分</div><div class="condition">7月23日（木）<br>17:00締切</div><div class="condition">七宗町内<br>配達無料</div><div class="condition">お弁当<br>2個から</div></div>
+          <div class="normal-order-link">7月26日以外の通常注文は<br><a href="bento_ver2.html">通常のうなぎ弁当宅配ページへ</a></div>
+        </div>
+      </section>
+      <section class="section-tight"><div class="container"><div class="paper-panel"><span class="section-ribbon">土用の丑限定</span><h2>夏のごちそうを、<br>ご自宅で。</h2><p class="lead">暑さが厳しくなる土用の丑の日。<br>七宗遊園の三河産うなぎ弁当を、7月26日（日）にご自宅までお届けします。<br>ご家族の夕食に、ご実家への贈りものに、どうぞお早めにご予約ください。</p></div></div></section>
+      <section><div class="container"><h2>お品書き</h2><p class="lead">三河産うなぎを使った、土用の丑のお弁当を三つご用意しました。</p><div class="menu-list">
+        <div class="menu-item"><div class="menu-thumb"><img src="lunchbox_images/unagibento.jpg" alt="三河産 うな重弁当" onerror="this.remove(); this.parentElement.textContent='うな重';"></div><div><div class="menu-name">三河産 うな重弁当</div><div class="menu-price-wrap"><span class="menu-old-price">通常 <s>3,300円</s> →</span><span class="menu-sale-price">特別価格 2,700円（税込）</span></div><div class="menu-desc">香ばしく焼き上げた三河産うなぎを、ふっくらご飯にのせた定番弁当です。</div></div></div>
+        <div class="menu-item"><div class="menu-thumb"><img src="lunchbox_images/hitumabusi.jpg" alt="三河産 ひつまぶし弁当" onerror="this.remove(); this.parentElement.textContent='ひつまぶし';"></div><div><div class="menu-name">三河産 ひつまぶし弁当</div><div class="menu-price-wrap"><span class="menu-old-price">通常 <s>3,500円</s> →</span><span class="menu-sale-price">特別価格 2,900円（税込）</span></div><div class="menu-desc">そのまま食べて、薬味で食べて、最後は出汁で。贅沢に楽しめるひつまぶし弁当です。</div></div></div>
+        <div class="menu-item"><div class="menu-thumb"><img src="lunchbox_images/unagyu.png" alt="極み うな牛まぶし弁当" onerror="this.remove(); this.parentElement.textContent='うな牛';"></div><div><div class="menu-name">極み うな牛まぶし弁当</div><div class="menu-price-wrap"><span class="menu-sale-price">3,500円（税込）</span></div><div class="menu-desc">三河産うなぎと飛騨牛サーロインを一緒に楽しめる、ご馳走弁当です。</div></div></div>
+      </div></div></section>
+      <section class="commitment-section"><div class="container"><div class="paper-panel"><div class="eyebrow">こだわり</div><h2>こだわり抜いた<br>七宗遊園の鰻</h2><p class="lead">長年、川魚料理や釣り堀を通して、魚と向き合ってきた七宗遊園が、土用の丑に三河産うなぎを丁寧に焼き上げます。<br><br>神渕産のお米。<br>白扇酒造のみりん・料理酒を使った自家製タレ。<br><br>ご自宅で楽しんでいただきたい。<br>そんな思いで、うなぎ弁当をご用意しました。</p></div></div></section>
+      <section><div class="container"><div class="knowledge-card"><div class="knowledge-title">土用の丑の豆知識</div><p class="lead">土用の丑の日とは、季節の変わり目にあたる「土用」の中の丑の日のこと。<br>江戸時代から、暑さの厳しいこの時期に、栄養のあるうなぎを食べて元気をつける日として広まりました。<br>夏のごちそうを、ご自宅でゆっくりお楽しみください。</p></div></div></section>
+      <section class="section-tight"><div class="container"><div class="kakegami-card"><div><span class="section-ribbon">土用の丑限定</span><h2>特製掛け紙で<br>ご用意します</h2><p class="lead">年に一度の土用の丑に合わせて、夏らしい特製掛け紙を巻いてお届けします。<br>ご自宅の食卓を、少し華やかに彩ります。</p></div><div class="kakegami-image"><img src="lunchbox_images/Special＿nosi.png" alt="土用の丑限定掛け紙のイメージ"></div></div></div></section>
+      <section class="section-tight"><div class="container"><div class="eyebrow">ご注文について</div><h2>予約前に<br>ご確認ください</h2><div class="order-grid"><div class="order-card"><span>お届け日</span>7月26日（日）</div><div class="order-card"><span>ご予約締切</span>7月23日（木）17:00まで</div><div class="order-card"><span>配達時間</span>15:00〜18:00</div><div class="order-card"><span>配達料</span>七宗町内 配達無料</div><div class="order-card"><span>ご注文数</span>お弁当2個から承ります</div><div class="order-card"><span>お支払い</span>お電話注文は、配達時に現金でお支払い</div><div class="order-card"><span>数量</span>数量に限りがあります</div></div></div></section>
+      <section class="faq-section"><div class="container"><h2>よくあるご質問</h2><div class="faq-list"><details class="faq-item"><summary>Q. 当日注文はできますか？</summary><div class="faq-answer"><p>数量確認と仕込みの都合上、7月23日（木）17:00までのご予約をお願いします。</p></div></details><details class="faq-item"><summary>Q. 1個だけでも配達できますか？</summary><div class="faq-answer"><p>配達の都合上、お弁当は合計2個から承ります。</p></div></details><details class="faq-item"><summary>Q. 何時ごろ届きますか？</summary><div class="faq-answer"><p>15:00〜18:00の間で順番にお届けします。</p></div></details><details class="faq-item"><summary>Q. 支払い方法は？</summary><div class="faq-answer"><p>お電話注文の場合は、商品お届け時に現金でお支払いください。</p></div></details><details class="faq-item"><summary>Q. 配達料はかかりますか？</summary><div class="faq-answer"><p>七宗町内は配達無料です。</p></div></details></div></div></section>
+      <section class="final-cta"><div class="container"><h2>土用の丑の<br>うなぎ弁当を<br>予約する</h2><p class="lead">7月26日（日）のお届け分は、7月23日（木）17:00までのご予約制です。</p><div class="deadline-band">ご予約締切：7月23日（木）17:00まで</div><button class="btn btn-line js-open-modal page-cta" type="button">LINEでかんたん予約</button><a class="btn btn-tel page-cta" href="tel:0574461128" style="margin-top:10px;">電話で予約する</a><div class="tel-info">電話番号：0574-46-1128<br>受付時間：10:00〜17:00<br>七宗町内 配達無料・お弁当2個から</div></div></section>
+    </main>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-name">七宗遊園</div>
+        <div class="footer-copy">7月26日（日）土用の丑 うなぎ弁当予約</div>
+
+        <div class="footer-contact">
+          <div>土用の丑 予約専用</div>
+          <div>ご予約・お問い合わせ</div>
+          <a href="tel:0574461128">TEL 0574-46-1128</a><br>
+          <span>受付時間 10:00〜17:00</span><br>
+          <span>ご予約締切 7月23日（木）17:00まで</span>
+        </div>
+
+        <div class="footer-note">
+          © 七宗遊園 All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="floating-cta">
+    <button class="btn btn-line floating-main js-open-modal" type="button">
+      <span class="floating-small">土用の丑</span>
+      <span class="floating-main-text">予約する</span>
+    </button>
+    <div class="floating-sub">
+      <span>7/23 17時まで</span>
+      <span>2個から</span>
+      <a href="tel:0574461128">電話注文はこちら</a>
+    </div>
+  </div>
+
+  <div class="modal" id="reservationModal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <div class="modal-headline">
+          <div>
+            <div class="modal-title" id="modalTitle">土用の丑のうなぎ弁当を予約</div>
+          </div>
+          <button class="close-btn js-close-modal" type="button" aria-label="閉じる">×</button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+
+        <form id="reservationForm">
+          <div class="form-block">
+            <div class="form-title">1. お届け日</div>
+            <div class="field">
+              <label for="deliveryDate">お届け日<span class="required">必須</span></label>
+              <select id="deliveryDate" required>
+                <option value="">配達日を選択してください</option>
+              </select>
+              <div class="help">7月26日（日）お届け分のみ選択できます。</div>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <div class="form-title">2. お客様情報</div>
+            <div class="field">
+              <label for="customerName">お名前<span class="required">必須</span></label>
+              <input id="customerName" type="text" placeholder="例：七宗　太郎" required autocomplete="name" />
+            </div>
+
+            <div class="field">
+              <label for="phone">電話番号<span class="required">必須</span></label>
+              <input id="phone" type="tel" placeholder="例：090-1234-5678" required autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="zip">郵便番号</label>
+              <div class="zip-row">
+                <input id="zip" type="text" inputmode="numeric" placeholder="例：5090401" autocomplete="postal-code" />
+                <button class="small-btn" type="button" id="zipSearch">住所検索</button>
+              </div>
+              <div class="help">郵便番号を入力すると住所を自動入力できます。</div>
+            </div>
+
+            <div class="field">
+              <label for="address">ご住所（番地までご入力ください）<span class="required">必須</span></label>
+              <input id="address" type="text" placeholder="例：岐阜県七宗町神渕4183-4番地" required autocomplete="street-address" />
+            </div>
+          </div>
+
+          <div class="form-block">
+            <div class="form-title">3. お弁当の数</div>
+
+            <div class="qty-row" data-item="三河産 うな重弁当" data-price="2700" data-category="bento">
+              <div>
+                <div class="qty-name">三河産 うな重弁当</div>
+                <div class="qty-price">通常3,300円 → 特別価格2,700円（税込）</div>
+              </div>
+              <div class="qty-control">
+                <button class="qty-btn" type="button" data-action="minus">−</button>
+                <div class="qty-num">0</div>
+                <button class="qty-btn" type="button" data-action="plus">＋</button>
+              </div>
+            </div>
+
+            <div class="qty-row" data-item="三河産 ひつまぶし弁当" data-price="2900" data-category="bento">
+              <div>
+                <div class="qty-name">三河産 ひつまぶし弁当</div>
+                <div class="qty-price">通常3,500円 → 特別価格2,900円（税込）</div>
+              </div>
+              <div class="qty-control">
+                <button class="qty-btn" type="button" data-action="minus">−</button>
+                <div class="qty-num">0</div>
+                <button class="qty-btn" type="button" data-action="plus">＋</button>
+              </div>
+            </div>
+
+            <div class="qty-row" data-item="極み うな牛まぶし弁当" data-price="3500" data-category="bento">
+              <div>
+                <div class="qty-name">極み うな牛まぶし弁当</div>
+                <div class="qty-price">税込3500円</div>
+              </div>
+              <div class="qty-control">
+                <button class="qty-btn" type="button" data-action="minus">−</button>
+                <div class="qty-num">0</div>
+                <button class="qty-btn" type="button" data-action="plus">＋</button>
+              </div>
+            </div>
+
+            <div class="error" id="bentoError">お弁当の合計が2個以上になるようにしてください。</div>
+          </div>
+
+          <div class="form-block">
+            <div class="form-title">4. 備考</div>
+            <div class="field">
+              <label for="note">備考・ご希望</label>
+              <textarea id="note" placeholder="例：18時前だと助かります"></textarea>
+            </div>
+          </div>
+
+          <div class="summary-box" id="summaryBox">予約内容がここに表示されます。</div>
+
+          <label class="confirm-row">
+            <input id="confirmCheck" type="checkbox" required />
+            <span>内容を確認しました</span>
+          </label>
+
+          <button class="btn btn-line" type="submit">LINEでかんたん予約</button>
+          <div class="submit-help">
+            アカウント名：七宗遊園【弁当配達】
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const LINE_ACCOUNT_ID = "@602nbqce";
+    const modal = document.getElementById("reservationModal");
+    const form = document.getElementById("reservationForm");
+    const deliveryDate = document.getElementById("deliveryDate");
+    const summaryBox = document.getElementById("summaryBox");
+    const bentoError = document.getElementById("bentoError");
+    
+
+    function openModal() {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      updateSummary();
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll(".js-open-modal").forEach(btn => {
+      btn.addEventListener("click", openModal);
+    });
+
+    document.querySelectorAll(".js-close-modal").forEach(btn => {
+      btn.addEventListener("click", closeModal);
+    });
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeModal();
+    });
+
+    function formatDateLabel(date) {
+      const days = ["日", "月", "火", "水", "木", "金", "土"];
+      const m = date.getMonth() + 1;
+      const d = date.getDate();
+      const day = days[date.getDay()];
+      return `${m}月${d}日（${day}）`;
+    }
+
+    function setupDeliveryDates() {
+      const option = document.createElement("option");
+      option.value = "2026-07-26";
+      option.textContent = "7月26日（日）";
+      option.selected = true;
+      deliveryDate.appendChild(option);
+    }
+
+    setupDeliveryDates();
+
+    function getQuantities() {
+      return Array.from(document.querySelectorAll(".qty-row")).map(row => {
+        const qty = Number(row.querySelector(".qty-num").textContent);
+        return {
+          row,
+          item: row.dataset.item,
+          price: Number(row.dataset.price),
+          category: row.dataset.category || "",
+          qty
+        };
+      });
+    }
+
+    function updateSummary() {
+      const items = getQuantities().filter(item => item.qty > 0);
+      const bentoCount = getQuantities()
+        .filter(item => item.category === "bento")
+        .reduce((sum, item) => sum + item.qty, 0);
+      const total = items.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+      const name = document.getElementById("customerName").value || "未入力";
+      const phone = document.getElementById("phone").value || "未入力";
+      const address = document.getElementById("address").value || "未入力";
+      const dateText = deliveryDate.options[deliveryDate.selectedIndex]?.text || "未選択";
+      const note = document.getElementById("note").value || "なし";
+
+      const itemText = items.length
+        ? items.map(item => `・${item.item} × ${item.qty}`).join("\n")
+        : "・未選択";
+
+      summaryBox.textContent =
+`【七宗遊園 土用の丑 うなぎ弁当 予約内容】
+お届け日：${dateText}
+氏名：${name}
+電話番号：${phone}
+ご住所：${address}
+
+ご予約商品：
+${itemText}
+
+お弁当合計：${bentoCount}個
+合計金額：${total.toLocaleString()}円
+備考：${note}`;
+    }
+
+    document.querySelectorAll(".qty-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const row = btn.closest(".qty-row");
+        const num = row.querySelector(".qty-num");
+        let value = Number(num.textContent);
+
+        if (btn.dataset.action === "plus") value += 1;
+        if (btn.dataset.action === "minus") value = Math.max(0, value - 1);
+
+        num.textContent = value;
+        bentoError.classList.remove("is-show");
+        updateSummary();
+      });
+    });
+
+    form.addEventListener("input", updateSummary);
+    form.addEventListener("change", updateSummary);
+
+    document.getElementById("zipSearch").addEventListener("click", async () => {
+      const zip = document.getElementById("zip").value.replace(/[^0-9]/g, "");
+      if (!zip) return;
+
+      try {
+        const res = await fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${zip}`);
+        const data = await res.json();
+        if (data.results && data.results[0]) {
+          const r = data.results[0];
+          document.getElementById("address").value = `${r.address1}${r.address2}${r.address3}`;
+          updateSummary();
+        }
+      } catch (error) {
+        // 住所検索が使えない場合も手入力できるため、何も表示しない。
+      }
+    });
+
+    function buildLineMessage() {
+      updateSummary();
+
+      const items = getQuantities().filter(item => item.qty > 0);
+      const total = items.reduce((sum, item) => sum + item.price * item.qty, 0);
+
+      const name = document.getElementById("customerName").value || "未入力";
+      const phone = document.getElementById("phone").value || "未入力";
+      const zip = document.getElementById("zip").value || "未入力";
+      const address = document.getElementById("address").value || "未入力";
+      const dateText = deliveryDate.options[deliveryDate.selectedIndex]?.text || "未選択";
+      const note = document.getElementById("note").value || "なし";
+
+      const itemText = items.length
+        ? items.map(item => `■ ${item.item}: ${item.qty}個`).join("\n")
+        : "■ 注文内容: 未選択";
+
+      return `【七宗遊園 土用の丑 うなぎ弁当 予約リクエスト】
+■ お届け日: ${dateText}
+■ 氏名: ${name} 様
+■ 電話番号: ${phone}
+■ 郵便番号: ${zip}
+■ ご住所: ${address}
+
+【ご予約商品】
+${itemText}
+
+■ 合計金額: ${total.toLocaleString()}円
+■ 備考: ${note}
+------------------------
+※上記の内容で予約をお願いします。`;
+    }
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const bentoCount = getQuantities()
+        .filter(item => item.category === "bento")
+        .reduce((sum, item) => sum + item.qty, 0);
+
+      if (bentoCount < 2) {
+        bentoError.classList.add("is-show");
+        bentoError.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+
+      if (!form.reportValidity()) return;
+
+      const textMessage = buildLineMessage();
+      const encodedText = encodeURIComponent(textMessage);
+      const lineUrl = `https://line.me/R/oaMessage/${LINE_ACCOUNT_ID}/?${encodedText}`;
+
+      window.open(lineUrl, "_blank");
+    });
+
+    const floatingCta = document.querySelector(".floating-cta");
+    const pageCtas = document.querySelectorAll(".page-cta");
+
+    if (floatingCta && pageCtas.length) {
+      const visibleCtas = new Set();
+
+      const ctaObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            visibleCtas.add(entry.target);
+          } else {
+            visibleCtas.delete(entry.target);
+          }
+        });
+
+        floatingCta.classList.toggle("is-hidden", visibleCtas.size > 0);
+      }, {
+        threshold: 0.18,
+        rootMargin: "0px 0px -80px 0px"
+      });
+
+      pageCtas.forEach(cta => ctaObserver.observe(cta));
+    }
+
+  </script>
+</body>
+</html>
